@@ -1,0 +1,349 @@
+ANIMcompareClass	anim.h	/^#define ANIMcompareClass(h)      dtm_compare_class/
+ANIMgetExpansion	anim.h	/^#define ANIMgetExpansion(h,x,y)	{if (-1 == dtm_get/
+ANIMgetFrame	anim.h	/^#define ANIMgetFrame(h,i)	dtm_get_int(h,ANIMframeN/
+ANIMgetFrameSkip	anim.h	/^#define ANIMgetFrameSkip(h,i)	dtm_get_int(h,ANIMsk/
+ANIMgetFunc	anim.h	/^#define ANIMgetFunc(h,i)	dtm_get_int(h,ANIMfunc,i)/
+ANIMgetID	anim.h	/^#define ANIMgetID(h,s,l)         dtm_get_char(h,AN/
+ANIMgetRunType	anim.h	/^#define ANIMgetRunType(h,i)	dtm_get_int(h,ANIMRunT/
+ANIMisAnimation	anim.h	/^#define ANIMisAnimation(h,i)	((dtm_get_int(h,ANIMt/
+ANIMmarkAnimation	anim.h	/^#define ANIMmarkAnimation(h)	dtm_set_int(h,ANIMtag/
+ANIMsetClass	anim.h	/^#define ANIMsetClass(h)          dtm_set_class(h,A/
+ANIMsetExpansion	anim.h	/^#define ANIMsetExpansion(h,x,y)	{dtm_set_float(h,A/
+ANIMsetFrame	anim.h	/^#define ANIMsetFrame(h,i)	dtm_set_int(h,ANIMframeN/
+ANIMsetFrameSkip	anim.h	/^#define ANIMsetFrameSkip(h,i)	dtm_set_int(h,ANIMsk/
+ANIMsetFunc	anim.h	/^#define ANIMsetFunc(h,i)	dtm_set_int(h,ANIMfunc,i)/
+ANIMsetID	anim.h	/^#define ANIMsetID(h,s)           dtm_set_char(h,AN/
+ANIMsetRunType	anim.h	/^#define ANIMsetRunType(h,i)	dtm_set_int(h,ANIMRunT/
+CHECK_ERR	dtmint.h	/^#define	CHECK_ERR(X)	if (((long)(X)) == DTMERROR) /
+COLcompareClass	col.h	/^#define COLcompareClass(h)	DTMcompareClass(h,COLcl/
+COLgetDimension	col.h	/^#define COLgetDimension(h,i)	dtm_get_int(h,COLdims/
+COLgetFunc	col.h	/^#define COLgetFunc(h,f,l,i)	{ dtm_get_char(h,COLfu/
+COLgetID	col.h	/^#define COLgetID(h,s,l)		dtm_get_char(h,COLid,s,l)/
+COLsetClass	col.h	/^#define COLsetClass(h)		DTMsetClass(h,COLclass)$/
+COLsetDimension	col.h	/^#define COLsetDimension(h,i)	dtm_set_int(h,COLdims/
+COLsetFunc	col.h	/^#define COLsetFunc(h,f,s)	{ dtm_set_char(h,COLfunc/
+COLsetID	col.h	/^#define COLsetID(h,i)		dtm_set_char(h,COLid,i)$/
+COMcompareClass	com.h	/^#define COMcompareClass(h)	dtm_compare_class(h,COM/
+COMgetDomain	com.h	/^#define COMgetDomain(h,s,l)	dtm_get_char(h,COMdoma/
+COMgetID	com.h	/^#define COMgetID(h,s,l)		dtm_get_char(h,COMid,s,l)/
+COMgetMesg	com.h	/^#define COMgetMesg(h,s,l)	dtm_get_char(h,COMmesg,s/
+COMsetClass	com.h	/^#define COMsetClass(h)		dtm_set_class(h,COMclass)$/
+COMsetDomain	com.h	/^#define COMsetDomain(h,s)	dtm_set_char(h,COMdomain/
+COMsetID	com.h	/^#define COMsetID(h,s)		dtm_set_char(h,COMid,s)$/
+COMsetMesg	com.h	/^#define COMsetMesg(h,s)		dtm_set_char(h,COMmesg,s)/
+Callback	dtm.h	/^*  Added support for Callback ( DTMreadReady ).$/
+DBGFLOW	debug.h	/^#define	DBGFLOW(s)		if (uDTMdbg & DTM_DBG_MSG) fpr/
+DBGFLT	debug.h	/^#define	DBGFLT(s, f)	if (uDTMdbg & DTM_DBG_MSG) fp/
+DBGINT	debug.h	/^#define	DBGINT(s, i)	if (uDTMdbg & DTM_DBG_MSG) fp/
+DBGMSG	debug.h	/^#define	DBGMSG(s)			if (uDTMdbg & DTM_DBG_MSG) fpr/
+DBGMSG1	debug.h	/^#define	DBGMSG1(s, arg1 )	if (uDTMdbg & DTM_DBG_MS/
+DBGMSG2	debug.h	/^#define	DBGMSG2(s, arg1, arg2 )		 if (uDTMdbg & DT/
+DBGMSG3	debug.h	/^#define	DBGMSG3(s, arg1, arg2, arg3 ) if (uDTMdbg /
+DBGPTR	debug.h	/^#define	DBGPTR(s, p)	if (uDTMdbg & DTM_DBG_MSG) fp/
+DBGSTR	debug.h	/^#define	DBGSTR(s, str)	if (uDTMdbg & DTM_DBG_MSG) /
+DBcompareClass	db.h	/^#define	DBcompareClass(h)	DTMcompareClass(h, DBcla/
+DBgetAuthor	db.h	/^#define	DBgetAuthor(h, s, l)	dtm_get_char(h, DBaut/
+DBgetDB	db.h	/^#define	DBgetDB(h, s, l)	dtm_get_char(h, DBfile, s/
+DBgetDatatype	db.h	/^#define	DBgetDatatype(h, s, l)	dtm_get_char(h, DBd/
+DBgetKeywords	db.h	/^#define	DBgetKeywords(h, s, l)	dtm_get_char(h, DBk/
+DBgetMatches	db.h	/^#define	DBgetMatches(h, ip)	dtm_get_int(h, DBmatch/
+DBgetRecordSize	db.h	/^#define	DBgetRecordSize(h, ip)	dtm_get_int(h, DBre/
+DBgetScience	db.h	/^#define	DBgetScience(h, s, l)	dtm_get_char(h, DBsc/
+DBgetTitle	db.h	/^#define	DBgetTitle(h, s, l)	dtm_get_char(h, DBtitl/
+DBsetAuthor	db.h	/^#define DBsetAuthor(h, s)	dtm_set_char(h, DBauthor/
+DBsetClass	db.h	/^#define	DBsetClass(h)		DTMsetClass(h, DBclass)$/
+DBsetDB	db.h	/^#define DBsetDB(h, s)		dtm_set_char(h, DBfile, s)$/
+DBsetDatatype	db.h	/^#define	DBsetDatatype(h, s)	dtm_set_char(h, DBdata/
+DBsetKeywords	db.h	/^#define	DBsetKeywords(h, s)	dtm_set_char(h, DBkeyw/
+DBsetMatches	db.h	/^#define	DBsetMatches(h, i)	dtm_set_int(h, DBmatch,/
+DBsetRecordSize	db.h	/^#define	DBsetRecordSize(h, i)	dtm_set_int(h, DBrec/
+DBsetScience	db.h	/^#define DBsetScience(h, s)	dtm_set_char(h, DBscien/
+DBsetTitle	db.h	/^#define DBsetTitle(h, s)	dtm_set_char(h, DBtitle, /
+DTMAR	dtmf77.c	/^int DTMAR(int *p)$/
+DTMAW	dtmf77.c	/^int DTMAW(int *p)$/
+DTMBR	dtmf77.c	/^int DTMBR(int *p,_fcd header,int *size)$/
+DTMBW	dtmf77.c	/^int DTMBW(int *p,_fcd header,int *size)$/
+DTMER	dtmf77.c	/^int DTMER(int *p)$/
+DTMERR	debug.h	/^#define	DTMERR(x)	if (uDTMdbg & DTM_DBG_MSG) fprin/
+DTMEW	dtmf77.c	/^int DTMEW(int *p)$/
+DTMGPA	dtmf77.c	/^int DTMGPA(int *p,_fcd s,int *len)$/
+DTMMIP	dtmf77.c	/^int DTMMIP(_fcd s)$/
+DTMMOP	dtmf77.c	/^int DTMMOP(_fcd s)$/
+DTMRD	dtmf77.c	/^int DTMRD(int *p,char *ds,int *size,DTMTYPE type)$/
+DTMSD	dtmf77.c	/^int DTMSD(int *p,char *ds,int *size,DTMTYPE type)$/
+DTMVieeeD2vaxD	vaxcvt.c	/^int DTMVieeeD2vaxD(union double_uint_uchar d[],int/
+DTMVieeeD2vaxG	vaxcvt.c	/^int DTMVieeeD2vaxG(union double_uint_uchar g[],int/
+DTMVieeeF2vaxF	vaxcvt.c	/^int DTMVieeeF2vaxF(union float_uint_uchar f[],int /
+DTMVvaxD2ieeeD	vaxcvt.c	/^int DTMVvaxD2ieeeD(union double_uint_uchar d[],int/
+DTMVvaxF2ieeeF	vaxcvt.c	/^int DTMVvaxF2ieeeF(union float_uint_uchar f[],int /
+DTMVvaxG2ieeeD	vaxcvt.c	/^int DTMVvaxG2ieeeD(union double_uint_uchar g[],int/
+DTMaddInPortSocket	dtm.c	/^int   DTMaddInPortSocket(int p,int socket )$/
+DTMaddInput	x.c	/^int DTMaddInput( int p_ext, caddr_t condition, $/
+DTMavailRead	dtm.c	/^int DTMavailRead(int p )$/
+DTMavailWrite	dtm.c	/^int DTMavailWrite(int port )$/
+DTMbeginRead	dtm.c	/^int DTMbeginRead(int p,VOIDPTR header,int size )$/
+DTMbeginWrite	dtm.c	/^int DTMbeginWrite(int port,VOIDPTR header,int size/
+DTMcheckRoute	dtm.c	/^int DTMcheckRoute(int port )$/
+DTMcompareClass	dtm.h	/^#define		DTMcompareClass(h)	dtm_compare_class((h),/
+DTMdestroyPort	dtminit.c	/^int DTMdestroyPort(int port)$/
+DTMendRead	dtm.c	/^int DTMendRead(int p )$/
+DTMendWrite	dtm.c	/^int DTMendWrite(int port )$/
+DTMerrmsg	fatal.c	/^char *DTMerrmsg(int quiet)$/
+DTMgetConnectionCount	dtm.c	/^int DTMgetConnectionCount(int port,int *n_connecti/
+DTMgetGroup	dtmmisc.c	/^int DTMgetGroup(char *h,DTMCMD cmd,char *parent,ch/
+DTMgetNameServerAddr	nmsg.c	/^int DTMgetNameServerAddr(int fd,char *name,int len/
+DTMgetPortAddr	dtminit.c	/^int DTMgetPortAddr(int port,char *addr,int length)/
+DTMgetRemotePortAddr	dtminit.c	/^int DTMgetRemotePortAddr(int port,char ***addrs,in/
+DTMgetType	dtmmisc.c	/^DTMTYPE DTMgetType(char *h)$/
+DTMinit	dtm.h	/^* Added extern definition for DTMinit()$/
+DTMmakeInPort	dtminit.c	/^int DTMmakeInPort(char *portname,int qservice )$/
+DTMmakeNameServerPort	nmsg.c	/^int DTMmakeNameServerPort(char *portid)$/
+DTMmakeOutPort	dtminit.c	/^int DTMmakeOutPort(char *portname,int qservice )$/
+DTMreadDataset	dtm.c	/^int DTMreadDataset(int p,VOIDPTR ds,int size,DTMTY/
+DTMreadMsg	dtm.c	/^int DTMreadMsg(int p,char *hdr,int hdrsize,VOIDPTR/
+DTMreadReady	callback.c	/^int DTMreadReady( int port, void (*pfn)() )$/
+DTMrecvRegistration	nmsg.c	/^int DTMrecvRegistration(int fd,char *buffer,int le/
+DTMselectRead	dtm.c	/^int DTMselectRead( Dtm_set *dtmset,int dtmnum,Sock/
+DTMsendDiscard	nmsg.c	/^int DTMsendDiscard(int fd,char *sendto_addr,int se/
+DTMsendRoute	nmsg.c	/^int DTMsendRoute(int fd,char *sendto_addr,int addc/
+DTMsetClass	dtm.h	/^#define		DTMsetClass(h)		dtm_set_class((h), DTMcla/
+DTMsetGroup	dtmmisc.c	/^void DTMsetGroup(char *h,DTMCMD cmd,char *parent,c/
+DTMsetType	dtmmisc.c	/^void DTMsetType(char *h,DTMTYPE type)$/
+DTMsigioHandler	callback.c	/^static void DTMsigioHandler(int sig,int code,struc/
+DTMsizeof	dtm.c	/^int DTMsizeof(DTMTYPE type )$/
+DTMwriteDataset	dtm.c	/^int DTMwriteDataset(int p,VOIDPTR ds,int size,DTMT/
+DTMwriteMsg	dtm.c	/^int DTMwriteMsg(int p,char *hdr,int hdrsize,VOIDPT/
+Deleted	ris.c	/^* Deleted (via comments) superfluous functions.  L/
+ERRTEST	rwrtns.c	/^#define ERRTEST(err) (err == EAGAIN || err == EWOU/
+EXECcompareClass	exec.h	/^#define EXECcompareClass(h)		dtm_compare_class(h,E/
+EXECgetAddress	exec.h	/^#define EXECgetAddress(h,s,l)		dtm_get_char(h,EXEC/
+EXECgetAuthentication	exec.h	/^#define EXECgetAuthentication(h,s,l)	dtm_get_char(/
+EXECgetID	exec.h	/^#define EXECgetID(h,s,l)		dtm_get_char(h,EXECid,s,/
+EXECgetLoad1	exec.h	/^#define EXECgetLoad1(h,f)		dtm_get_float(h,EXEC_HS/
+EXECgetLoad15	exec.h	/^#define EXECgetLoad15(h,f)		dtm_get_float(h,EXEC_H/
+EXECgetLoad5	exec.h	/^#define EXECgetLoad5(h,f)		dtm_get_float(h,EXEC_HS/
+EXECgetNumUsers	exec.h	/^#define EXECgetNumUsers(h,i)		dtm_get_int(h,EXEC_H/
+EXECgetTimeStamp	exec.h	/^#define EXECgetTimeStamp(h,s,l)		dtm_get_char(h,EX/
+EXECgetType	exec.h	/^#define EXECgetType(h,i)		dtm_get_int(h,EXECtype,i/
+EXECsetAddress	exec.h	/^#define EXECsetAddress(h,s)		dtm_set_char(h,EXECad/
+EXECsetAuthentication	exec.h	/^#define EXECsetAuthentication(h,s)	dtm_set_char(h,/
+EXECsetClass	exec.h	/^#define EXECsetClass(h)			dtm_set_class(h,EXECclas/
+EXECsetID	exec.h	/^#define EXECsetID(h,s)			dtm_set_char(h,EXECid,s)$/
+EXECsetLoad1	exec.h	/^#define EXECsetLoad1(h,f)		dtm_set_float(h,EXEC_HS/
+EXECsetLoad15	exec.h	/^#define EXECsetLoad15(h,f)		dtm_set_float(h,EXEC_H/
+EXECsetLoad5	exec.h	/^#define EXECsetLoad5(h,f)		dtm_set_float(h,EXEC_HS/
+EXECsetNumUsers	exec.h	/^#define EXECsetNumUsers(h,i)		dtm_set_int(h,EXEC_H/
+EXECsetTimeStamp	exec.h	/^#define EXECsetTimeStamp(h,s)		dtm_set_char(h,EXEC/
+EXECsetType	exec.h	/^#define EXECsetType(h,i)		dtm_set_int(h,EXECtype,i/
+FOR_EACH_IN_PORT	dtmint.h	/^#define	FOR_EACH_IN_PORT( inp, pp ) \\$/
+FOR_EACH_OUT_PORT	dtmint.h	/^#define	FOR_EACH_OUT_PORT( pcur, pp ) \\$/
+FREE	vdata.c	/^#define FREE(x)		free(x)$/
+INIT	dtmint.h	/^#define	INIT(x)	= x$/
+Koziol	arch.h	/^* Added changed for PC\/MAC from Quincey Koziol (ko/
+LOCALINT	dtmint.h	/^#  define       LOCALINT(x)     (x >>= 32)$/
+MALLOC	vdata.c	/^#define MALLOC(x)	malloc(x)$/
+MDDcompareClass	mdd.h	/^#define MDDcompareClass(h)		DTMcompareClass(h, MDD/
+MDDfindMinMax	mdd.c	/^void MDDfindMinMax(char *h,float *mdd,float *min,f/
+MDDgetDimensions	mdd.c	/^int MDDgetDimensions(char *h,int *rank,int *dims,i/
+MDDgetMinMax	mdd.c	/^int MDDgetMinMax(char *h,float *min,float *max)$/
+MDDgetPalette	mdd.h	/^#define MDDgetPalette(h, t, l)		dtm_get_char(h, PA/
+MDDnumElements	mdd.c	/^int MDDnumElements(int rank,int *dims)$/
+MDDsetClass	mdd.h	/^#define MDDsetClass(h)			DTMsetClass(h, MDDclass)$/
+MDDsetDimensions	mdd.c	/^void MDDsetDimensions(char *h,int rank,int *dims)$/
+MDDsetMinMax	mdd.c	/^void MDDsetMinMax(char *h,float min,float max)$/
+MDDsetPalette	mdd.h	/^#define MDDsetPalette(h, t)		dtm_set_char(h, PALcl/
+MSG	dtm.h	/^ * Added MSG(sg)etString macros.$/
+MSGcompareClass	dtm.h	/^#define		MSGcompareClass(h)	dtm_compare_class((h),/
+MSGgetString	dtm.h	/^#define		MSGgetString(h, s, l)	dtm_get_char((h), "/
+MSGsetClass	dtm.h	/^#define		MSGsetClass(h)		dtm_set_class((h), MSGcla/
+MSGsetString	dtm.h	/^#define		MSGsetString(h, s)	dtm_set_char((h), "STR/
+PALcompareClass	mdd.h	/^#define PALcompareClass(h)		DTMcompareClass(h, PAL/
+PALgetSize	ris.h	/^#define PALgetSize(h, s)	((*(s)=(int)256), \\$/
+PALsetClass	mdd.h	/^#define PALsetClass(h)			DTMsetClass(h, PALclass)$/
+PALsetSize	ris.h	/^#define PALsetSize(h, s)	dtm_set_int((h), PALeleme/
+PROTO	dtm.h	/^#define	PROTO(x)	x$/
+RIScompareClass	ris.h	/^#define	RIScompareClass(h)	dtm_compare_class(h, RI/
+RISgetDimensions	ris.c	/^int RISgetDimensions(char *h,int *x,int *y)$/
+RISgetPaletteName	ris.h	/^#define RISgetPaletteName(h, c, l)	dtm_get_char((h/
+RISgetType	ris.h	/^#define RISgetType(h, t)	((*(t)=(int)RIS24BIT), \\$/
+RISsetClass	ris.h	/^#define RISsetClass(h)		dtm_set_class(h, RISclass)/
+RISsetDimensions	ris.c	/^void RISsetDimensions(char *h,int x,int y)$/
+RISsetPaletteName	ris.h	/^#define RISsetPaletteName(h, c)		dtm_set_char((h),/
+RISsetType	ris.h	/^#define RISsetType(h, t)	((dtm_set_int((h), RIStyp/
+SDLcompareClass	sdl.h	/^#define	SDLcompareClass(h)	dtm_compare_class((h), /
+SDLgetBoundingBox	sdl.c	/^int SDLgetBoundingBox(char *header, float *min, fl/
+SDLgetPrimitive	sdl.h	/^#define SDLgetPrimitive(h, p)	((*(p)=(int)SDLpoint/
+SDLsetBoundingBox	sdl.c	/^void SDLsetBoundingBox(char *header, float *min, f/
+SDLsetClass	sdl.h	/^#define SDLsetClass(h)		dtm_set_class((h), SDLclas/
+SDLsetPrimitive	sdl.h	/^#define SDLsetPrimitive(h, p)	dtm_set_int((h), SDL/
+SDSCC	sdsF.c	/^long SDSCC(s)$/
+SDSGD	sdsF.c	/^int SDSGD(s, rank, dims, len)$/
+SDSGDT	sdsF.c	/^void SDSGDT(s, type)$/
+SDSGMM	sdsF.c	/^long SDSGMM(s, min, max)$/
+SDSGT	sdsF.c	/^void SDSGT(s, t)$/
+SDSHL	sdsF.c	/^long SDSHL(s)$/
+SDSNE	sdsF.c	/^long SDSNE(rank, dims)$/
+SDSSC	sdsF.c	/^void SDSSC(s)$/
+SDSSD	sdsF.c	/^void SDSSD(s, rank, dims)$/
+SDSSDT	sdsF.c	/^void SDSSDT(s, type)$/
+SDSSMM	sdsF.c	/^void SDSSMM(s, min, max)$/
+SDSST	sdsF.c	/^void SDSST(s, t)$/
+SDScompareClass	sds.h	/^#define SDScompareClass(h)		dtm_compare_class(h, S/
+SDSgetDimensions	sds.c	/^int SDSgetDimensions(char *h,int *rank,int *dims,i/
+SDSgetMinMax	sds.c	/^int SDSgetMinMax(char *h,float *min,float *max)$/
+SDSgetRank	sds.c	/^int SDSgetRank(char *h,int *rank)$/
+SDSnumElements	sds.c	/^int SDSnumElements(int rank,int *dims)$/
+SDSsetClass	sds.h	/^#define SDSsetClass(h)			dtm_set_class(h, SDSclass/
+SDSsetDimensions	sds.c	/^void SDSsetDimensions(char *h,int rank,int *dims)$/
+SDSsetMinMax	sds.c	/^void SDSsetMinMax(char *h,float min,float max)$/
+SRVcompareClass	srv.h	/^#define SRVcompareClass(h)      DTMcompareClass((h/
+SRVgetFunction	srv.h	/^#define SRVgetFunction(h,i)   dtm_get_int(h,SRVFun/
+SRVgetID	srv.h	/^#define SRVgetID(h,s,l) dtm_get_char(h,SRVid,s,l)$/
+SRVgetInPort	srv.h	/^#define SRVgetInPort(h,s,l) dtm_get_char(h,SRVInPo/
+SRVgetLockClass	srv.h	/^#define SRVgetLockClass(h,i)	dtm_get_int(h,SRVLock/
+SRVgetVersionNumber	srv.h	/^#define SRVgetVersionNumber(h,i)   dtm_get_int(h,S/
+SRVsetClass	srv.h	/^#define SRVsetClass(h)          DTMsetClass((h), S/
+SRVsetFunction	srv.h	/^#define SRVsetFunction(h,i)   dtm_set_int(h,SRVFun/
+SRVsetID	srv.h	/^#define SRVsetID(h,s)   dtm_set_char(h,SRVid,s)$/
+SRVsetInPort	srv.h	/^#define SRVsetInPort(h,s)   dtm_set_char(h,SRVInPo/
+SRVsetLockClass	srv.h	/^#define SRVsetLockClass(h,i)	dtm_set_int(h,SRVLock/
+SRVsetVersionNumber	srv.h	/^#define SRVsetVersionNumber(h,i)   dtm_set_int(h,S/
+SRVsetVersionString	srv.h	/^#define SRVsetVersionString(h,s)   dtm_set_char(h,/
+STDINT	dtmint.h	/^#  define       STDINT(x)       (x <<= 32)$/
+TXTHL	text.h	/^#define TXTHL(h)		dtm_header_length$/
+TXTcompareClass	text.h	/^#define	TXTcompareClass(h)	DTMcompareClass((h), TX/
+TXTgetDimension	text.h	/^#define	TXTgetDimension(h,i)	dtm_get_int(h,TXTdims/
+TXTgetID	text.h	/^#define TXTgetID(h,s,l)	dtm_get_char(h,TXTid,s,l)$/
+TXTgetInsertionPt	text.h	/^#define TXTgetInsertionPt(h,i)	dtm_get_int(h,TXTip/
+TXTgetNumReplace	text.h	/^#define TXTgetNumReplace(h,i)	dtm_get_int(h,TXTncr/
+TXTgetSelectionLeft	text.h	/^#define TXTgetSelectionLeft(h,i)	dtm_get_int(h,TXT/
+TXTgetSelectionRight	text.h	/^#define TXTgetSelectionRight(h,i)	dtm_get_int(h,TX/
+TXTsetClass	text.h	/^#define	TXTsetClass(h)		DTMsetClass((h), TXTclass)/
+TXTsetDimension	text.h	/^#define	TXTsetDimension(h,i)	dtm_set_int(h,TXTdims/
+TXTsetID	text.h	/^#define	TXTsetID(h,s)	dtm_set_char(h,TXTid,s)$/
+TXTsetInsertionPt	text.h	/^#define TXTsetInsertionPt(h,i)	dtm_set_int(h,TXTip/
+TXTsetNumReplace	text.h	/^#define TXTsetNumReplace(h,i)	dtm_set_int(h,TXTncr/
+TXTsetReplaceAll	text.h	/^#define TXTsetReplaceAll(h)	dtm_set_int(h,TXTra,1)/
+TXTsetSelectionLeft	text.h	/^#define TXTsetSelectionLeft(h,i)	dtm_set_int(h,TXT/
+TXTsetSelectionRight	text.h	/^#define TXTsetSelectionRight(h,i)	dtm_set_int(h,TX/
+TXTshouldReplaceAll	text.h	/^#define TXTshouldReplaceAll(h,i)	(dtm_get_int(h,TX/
+VCTRLcompareClass	sdl.h	/^#define	VCTRLcompareClass(h)	dtm_compare_class((h)/
+VCTRLgetGTM	sdl.h	/^#define VCTRLgetGTM(h)		((dtm_find_tag(h, VCTRLgtm/
+VCTRLsetClass	sdl.h	/^#define VCTRLsetClass(h)	dtm_set_class((h), VCTRLc/
+VCTRLsetGTM	sdl.h	/^#define VCTRLsetGTM(h)		strcat(h, VCTRLgtm)$/
+VDATAcompareClass	vdata.h	/^#define VDATAcompareClass(h)	dtm_compare_class(h,V/
+VDATAgetField	vdata.h	/^#define VDATAgetField(h,s,l)	dtm_get_char(h,VDATAf/
+VDATAgetID	vdata.h	/^#define VDATAgetID(h,s,l)	dtm_get_char(h,VDATAid,s/
+VDATAgetNodeID	vdata.h	/^#define VDATAgetNodeID(h,i)	dtm_get_int(h,VDATAnod/
+VDATAgetNodeName	vdata.h	/^#define VDATAgetNodeName(h,s,l)	dtm_get_char(h,VDA/
+VDATAgetNumElements	vdata.h	/^#define VDATAgetNumElements(h,i)	dtm_get_int(h,VDA/
+VDATAgetNumRecords	vdata.h	/^#define VDATAgetNumRecords(h,i)	dtm_get_int(h,VDAT/
+VDATAgetPath	vdata.c	/^int VDATAgetPath(header,magicPath,pathLength)$/
+VDATAgetPathLength	vdata.h	/^#define VDATAgetPathLength(h,i)	dtm_get_int(h,VDAT/
+VDATAsetClass	vdata.h	/^#define VDATAsetClass(h)	dtm_set_class(h,VDATAclas/
+VDATAsetField	vdata.h	/^#define VDATAsetField(h,s)	dtm_set_char(h,VDATAfie/
+VDATAsetID	vdata.h	/^#define VDATAsetID(h,s)		dtm_set_char(h,VDATAid,s)/
+VDATAsetNodeID	vdata.h	/^#define VDATAsetNodeID(h,i)	dtm_set_int(h,VDATAnod/
+VDATAsetNodeName	vdata.h	/^#define VDATAsetNodeName(h,s)	dtm_set_char(h,VDATA/
+VDATAsetNumElements	vdata.h	/^#define VDATAsetNumElements(h,i)	dtm_set_int(h,VDA/
+VDATAsetNumRecords	vdata.h	/^#define VDATAsetNumRecords(h,i)	dtm_set_int(h,VDAT/
+VDATAsetPath	vdata.c	/^int VDATAsetPath(header,magicPath,pathLength)$/
+accept_one_header	dtm.c	/^static  int accept_one_header(DTMPORT *pp,void *he/
+add_nlist	dtmnserv.c	/^static void add_nlist(DTMPORT *pp,int count )$/
+address	dtm.h	/^* port address (DTMsetAddress and DTMgetAddress).$/
+atof	dtmmisc.c	/^* Included "string.h" instead of declaring externs/
+atoi	mdd.c	/^* removed atoi() and atof() in favor of <stdlib.h>/
+check_header_write_ack	dtm.c	/^static  int check_header_write_ack(DTMPORT *pp )$/
+clear_write_flags	dtm.c	/^static  int clear_write_flags(DTMPORT *pp )$/
+define	arch.h	/^#  define( _ARCH_UNIX )$/
+del_nlist	dtmnserv.c	/^static void del_nlist(DTMPORT *pp,int count )$/
+destroy_out_port	dtm.c	/^static int destroy_out_port( DTMPORT *pp, Outport /
+double	sds.c	/^* Change float to double (standard coersion).$/
+dtm_	dtm.h	/^* Removed DTMtitle and DTMtype constants.  Added d/
+dtm_accept	socket.c	/^int dtm_accept(int s,S_ADDR *sn,struct timeval *ti/
+dtm_accept_read_connections	dtm.c	/^int  dtm_accept_read_connections(DTMPORT *pp,int f/
+dtm_addr_to_a	dtminit.c	/^static char *    dtm_addr_to_a(S_ADDR addr )$/
+dtm_char	convert.c	/^static int dtm_char(mode, buf, size)$/
+dtm_check_server	dtmnserv.c	/^int dtm_check_server( DTMPORT *pp,int fWait )$/
+dtm_compare_class	dtm.h	/^#define	dtm_compare_class(h, c)		!strncmp((h), (c)/
+dtm_complex	convert.c	/^static int dtm_complex(mode, buf, size)$/
+dtm_connect	socket.c	/^int dtm_connect(S_ADDR *sn,int *s)$/
+dtm_destroy_in_port	dtm.c	/^int dtm_destroy_in_port( inp, pp )$/
+dtm_display_buf	dtmnserv.c	/^void dtm_display_buf(Outport *outp,char *portname /
+dtm_double	convert.c	/^static int dtm_double(mode, buf, size)$/
+dtm_end_connect	socket.c	/^int dtm_end_connect(int s)$/
+dtm_find_tag	dtmmisc.c	/^char *dtm_find_tag(char *h,char *tag)$/
+dtm_float	convert.c	/^static int dtm_float(mode, buf, size)$/
+dtm_get_address	dtm.h	/^#define	dtm_get_address(h, c, l)	dtm_get_char((h),/
+dtm_get_char	dtmmisc.c	/^int dtm_get_char(char *h,char *tag,char *s,int l)$/
+dtm_get_float	dtmmisc.c	/^int dtm_get_float(char *h,char *tag,float *x)$/
+dtm_get_int	dtmmisc.c	/^int dtm_get_int(char *h,char *tag,int *x)$/
+dtm_get_ipaddr	socket.c	/^unsigned long   dtm_get_ipaddr(char *ipaddrstr )$/
+dtm_get_naddr	ninit.c	/^char    *dtm_get_naddr(struct sockaddr_in *addr,in/
+dtm_get_refname	dtmnserv.c	/^char    *dtm_get_refname(void )$/
+dtm_get_title	dtm.h	/^#define	dtm_get_title(h, c, l)		dtm_get_char((h), /
+dtm_get_type	dtm.h	/^#define	dtm_get_type(h, t)   		((*(t)=(int)DTM_FLO/
+dtm_handle_in	dtm.c	/^void	dtm_handle_in( caddr_t client_data, int * fd,/
+dtm_handle_new_in	x.c	/^void dtm_handle_new_in( caddr_t client_data, int */
+dtm_handle_new_out	x.c	/^void dtm_handle_new_out( caddr_t client_data, int /
+dtm_header_length	dtm.h	/^#define	dtm_header_length(h)		(strlen(h)+1)$/
+dtm_init_sockaddr	socket.c	/^int dtm_init_sockaddr(struct sockaddr_in *sockaddr/
+dtm_int	convert.c	/^static int dtm_int(mode, buf, size)$/
+dtm_map_port_external	dtminit.c	/^void dtm_map_port_external(int32 *port )$/
+dtm_map_port_internal	dtminit.c	/^int dtm_map_port_internal( int32 port )$/
+dtm_new_out_port	dtmnserv.c	/^Outport *   dtm_new_out_port(Port *port )$/
+dtm_ninit	ninit.c	/^int dtm_ninit(void )$/
+dtm_nsend_ackroute	nmsg.c	/^int dtm_nsend_ackroute( char *portname )$/
+dtm_nsend_sockaddr	nmsg.c	/^dtm_nsend_sockaddr(int fd,char *sendto_addr,char */
+dtm_parse_ipaddr	socket.c	/^int dtm_parse_ipaddr(char *s,unsigned long *addr )/
+dtm_quick_connect	socket.c	/^int dtm_quick_connect(S_ADDR *sn,int *s)$/
+dtm_quick_select	socket.c	/^int dtm_quick_select(int s,int *count)$/
+dtm_read_buffer	rwrtns.c	/^int dtm_read_buffer(int d,int32 *blocklen,VOIDPTR /
+dtm_read_header	rwrtns.c	/^int   dtm_read_header(int fd,void *buf,int buflen /
+dtm_recv_ack	rwrtns.c	/^int dtm_recv_ack(int d,int *ack )$/
+dtm_recv_header	rwrtns.c	/^int dtm_recv_header(int d,VOIDPTR header,int lengt/
+dtm_recv_reliable	rwrtns.c	/^static int   dtm_recv_reliable(int d,char *buffer,/
+dtm_select	socket.c	/^int dtm_select(int s,int32 *count,int32 time )$/
+dtm_send_ack	rwrtns.c	/^int dtm_send_ack(int d, int32 ack)$/
+dtm_send_control	nmsg.c	/^static int dtm_send_control(int fd,char *msg,int m/
+dtm_send_some	rwrtns.c	/^static int dtm_send_some(int d, char *buf, int buf/
+dtm_set_Xcallback	dtm.c	/^void dtm_set_Xcallback( DTMPORT * pp, Inport * inp/
+dtm_set_address	dtm.h	/^#define	dtm_set_address(h, c)		dtm_set_char((h), "/
+dtm_set_char	dtmmisc.c	/^void dtm_set_char(char *h,char *tag,char *s)$/
+dtm_set_class	dtm.h	/^#define	dtm_set_class(h, c)		(strcpy((h), (c)), st/
+dtm_set_float	dtmmisc.c	/^void dtm_set_float( char * h, char * tag, float x)/
+dtm_set_int	dtmmisc.c	/^void dtm_set_int(char *h,char *tag,int x)$/
+dtm_set_title	dtm.h	/^#define	dtm_set_title(h, c)		dtm_set_char((h), "TT/
+dtm_set_type	dtm.h	/^#define	dtm_set_type(h, t)		dtm_set_int((h), "DT",/
+dtm_short	convert.c	/^static int dtm_short(mode, buf, size)$/
+dtm_sigio	callback.c	/^int dtm_sigio( int fd )$/
+dtm_socket_init	socket.c	/^int dtm_socket_init(S_ADDR *sockaddr,int porttype,/
+dtm_triplet	convert.c	/^static int dtm_triplet(mode, buf, size)$/
+dtm_version	fatal.c	/^void dtm_version(void )$/
+dtm_writev_buffer	rwrtns.c	/^int dtm_writev_buffer(int fd,struct iovec *iov,int/
+dtm_writev_failed	rwrtns.c	/^static int dtm_writev_failed(int fd,struct msghdr /
+fix	dtmint.h	/^* int\/long confict fix (no diff on workstations)$/
+free_port	dtminit.c	/^static int  free_port(int port )$/
+get_init_port	dtminit.c	/^static int  get_init_port(char *portname,int portt/
+grow_ports	dtminit.c	/^static	int	grow_ports( VOID )$/
+inc_in_port	dtm.c	/^static Inport * inc_in_port(DTMPORT *pp,Inport *in/
+inc_nextToRead	dtm.c	/^static void inc_nextToRead(DTMPORT *pp )$/
+init_port	dtminit.c	/^static  int init_port(int port,int porttype,int qs/
+init_refname	dtmnserv.c	/^static int init_refname(char *refname,int len )$/
+initialize	dtminit.c	/^static	int	initialize( VOID )		$/
+macro	dtm.h	/^* fixed DTMgetAddress macro (it was calling dtm_se/
+make_out_connections	dtm.c	/^static  int make_out_connections(DTMPORT *pp )$/
+make_write_iov	dtm.c	/^static void make_write_iov(IOV_BUF *iov,int fStart/
+min	dtmmisc.c	/^#define		min(a, b)	(((a) <= (b)) ? (a) : (b))$/
+new_in_port	dtm.c	/^static Inport *  new_in_port(DTMPORT *pp,int fd )$/
+outp_count	dtm.c	/^static int outp_count(DTMPORT *pp )$/
+register_port	dtminit.c	/^static int register_port(int port )$/
+select_one	dtm.c	/^static int32  select_one(int connfd )$/
+select_one_connection	dtm.c	/^static int  select_one_connection(int connfd )$/
+send_cts	dtm.c	/^static int send_cts(DTMPORT *pp,int fWait )$/
+set_out_port_address	dtminit.c	/^static int set_out_port_address(int port,S_ADDR ad/
+sherr	fatal.c	/^* good features of sherr (from the libtest directo/
+sizeof	rwrtns.c	/^* sizeof( int ) replaced by 4 for message to be se/
+swap	deccvt.c	/^#define		swap(x,y)	x ^= y;  y ^= x;  x ^= y$/
+verify_out_connections	dtm.c	/^static  int verify_out_connections(DTMPORT *pp )$/
+writev_buffer	dtm.c	/^static int  writev_buffer(DTMPORT *pp,IOV_BUF *iov/

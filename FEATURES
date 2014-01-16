@@ -1,0 +1,59 @@
+Current capabilities
+....................
+
+ o Support for accessing documents and data through Gopher, WAIS,
+   World Wide Web, FTP, NNTP/Usenet news, Techinfo, TeXinfo, Telnet,
+   tn3270, Archie, CSO qi/ph, NCSA DMF, local files, and other
+   sources.
+ o Friendly X/Motif user interface.
+ o Color and monochrome default X resource settings.
+ o Multiple independent toplevel windows.
+ o History list per window (both 'where you've been' and 'where you
+   can go').
+ o Global history with previously visited locations visually distinct;
+   global history is persistent across sessions.
+ o Hotlist/bookmark capability -- keep list of interesting documents,
+   add/remove/edit items, list is persistent across sessions.
+ o Personal annotations with GUI annotation entry dialog; annotations
+   can later be edited or deleted, and hyperlinks to existing annotations
+   are inlined into subsequent accesses of an annotated document. (Note:
+   any document from any server via any access method can be
+   annotated.)
+ o Group annotations with NCSA group annotation server (not yet
+   released).
+ o Audio (voice) annotations with GUI for controlling recording process
+   (SGI, SGI, and HP only).
+ o Support for recognizing and handling GIF, JPEG, TIFF, audio, AIFF,
+   DVI, MPEG, MIME, XWD, RGB, HDF, PostScript documents and forking
+   off appropriate viewers.
+ o Transparent and automatic uncompression of compressed (.Z) and
+   gzip'd (.z or .gz) files.
+ o Inlined images in formatted (HTML) text: X bitmaps and GIF images
+   can be included anywhere inside a document, and can act as hyperlink
+   anchors. Image files themselves can be located anywhere on the
+   network.  Images can act as maps, so clicking on them sends
+   coordinates of click to remote server.
+ o Binary transfer mode, for pulling down arbitrary binary files and
+   saving them to local disk without viewing them.
+ o In-document search capability.
+ o Fully 8-bit clean for formatted and plain text.
+ o Options for new window per document (aka TurboGopher interface)
+   -- always, or via middle mouse button.
+ o On-the-fly font and hyperlink style selection.
+ o Many common document and data source choices accessible via
+   menubar.
+ o Keyword search capability (for WAIS, Gopher, Archie, etc.).
+ o Cut and paste formatted text into other X windows.
+ o Smart handling of documents too big for single X window -- virtual
+   document pages via inlined hypertext.
+ o Save/mail/print documents in several formats, including formatted
+   ASCII text and PostScript.
+ o Online hypertext help and FAQ list.
+ o No config or resource file installation required; self-contained
+   executable.
+ o Extremely customizable.
+ o Can be controlled by signals to allow use as a full-featured help
+   or information presentation subsystems by existing applications.
+ o Integrated with NCSA Collage and NCSA DTM to broadcast
+   documents into real-time networked workgroup collaboration
+   sessions.

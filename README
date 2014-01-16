@@ -1,0 +1,132 @@
+NCSA Mosaic for the X Window System
+===================================
+
+Welcome to NCSA Mosaic.
+
+This README details installation steps.  More complete information and
+documentation on NCSA Mosaic is available online, via NCSA Mosaic.
+
+
+Binaries
+--------
+
+This release of NCSA Mosaic is known to compile on the following
+platforms:
+
+  SGI (IRIX 4.0.2) 
+  IBM (AIX 3.2)
+  Sun 4 (SunOS 4.1.2 with stock X11R4 and Motif 1.1).
+  DECstation 5000-200 (Ultrix).
+  DEC Alpha (OSF/1).
+
+Binaries for these platforms are available on ftp.ncsa.uiuc.edu in
+/Mosaic/xmosaic-binaries.
+
+Rumor has it that Mosaic will compile on systems like:
+
+  Hewlett Packard HP/UX 7.x, 8.x, 9.x.
+  Dell SVR4
+  Sun Solaris 2.x
+  SCO Open Desktop
+  Harris Nighthawk
+  NeXT BSD
+  
+If you have to make changes to NCSA Mosaic to get it to compile on a
+particular platform, please send a set of context diffs (e.g., 'diff
+-c oldfile newfile') to mosaic-x@ncsa.uiuc.edu.
+
+
+Installation instructions
+-------------------------
+
+So far, there's no toplevel Makefile.  This both simplifies and
+complicates things.
+
+Follow these steps:
+
+(1) Examine and modify Makefile in libwww.  Do 'make'.
+
+(2) Examine and modify Makefile in libhtmlw.  Do 'make'.
+
+(3) Decide whether you want to compile with DTM and DMF support.
+
+    DTM support allows you to send documents over NCSA's Data Transfer
+    Mechanism protocol to NCSA Collage, a real-time collaboration tool
+    that runs on X and Macs (available at ftp.ncsa.uiuc.edu in
+    /Collab), and other DTM clients.  Once a text file is in Collage
+    it can be freely edited or doodled upon, alone or in concert with
+    other people over the network.
+
+    DMF support would allow you to connect to NCSA Data Management
+    Facility servers, if we had any publicly available accessible,
+    which we don't, and which we probably won't in the future.
+
+    If you're not interested in either of these things, then you
+    shouldn't bother compiling them in.  Otherwise, you should compile 
+    both of them in.
+
+    If you don't want DTM and DMF support, go to step (6).
+
+(4) Build the DTM library in libdtm (which has support for various
+    architectures built in).  Do 'make sgi', 'make sun', or whatever.
+    Some architectures aren't supported by libdtm; in the event that
+    your particular architecture isn't, don't worry about it -- go
+    straight to step (6).
+
+(5) ONLY DO THIS IF YOU'VE ALSO DONE STEP 4: Examine and modify
+    Makefile in libdmf.  Do 'make'.
+
+(6) Examine and modify Makefile in src.
+
+    If you didn't want DTM and DMF support in step (3), make sure and
+    specify this in the Makefile where appropriate.
+
+    Do 'make'.
+
+(7) If you do not normally run Motif on your system (e.g., if you run
+    Sun OpenWindows instead), then you may get a whole bunch of
+    run-time errors about translations when you start Mosaic.
+
+    If this happens, copy the file XKeysymDB (included in this
+    directory) to /usr/lib/X11.  See the FAQ list online for more
+    information.
+
+
+X Defaults
+----------
+
+NCSA Mosaic includes sets of fallback X resources that provide
+reasonable screen display properties for three configurations: color,
+monochrome, and color SGI.  (Color SGI has its own configuration since
+SGI systems commonly use a gamma correction factor of 1.7, which makes
+their screens brighter than usual.)
+
+If you compile NCSA Mosaic out of the box, or if you download a binary
+from ftp.ncsa.uiuc.edu, the default resources will be for a color
+display (or, if you compile on an SGI, the default will be for color
+SGI).  See src/Makefile for information on how to have monochrome
+resources by default.  On the command line, the flags '-mono' and
+'-color' allow you to switch resource configurations at runtime.
+
+For your convenience, three corresponding X app-defaults files are
+included in this distribution: app-defaults.color,
+app-defaults.color-sgi, and app-defaults.mono.
+
+
+Bug Reports and Comments
+------------------------
+
+Bug reports and other comments can be sent to mosaic-x@ncsa.uiuc.edu.
+
+If you find NCSA Mosaic useful or particularly interesting, please
+also send us a note -- continued development of this project partially
+depends on user feedback and support.
+
+
+Cheers,
+
+Marc Andreessen
+Software Development Group
+National Center for Supercomputing Applications
+University of Illinois at Urbana-Champaign
+marca@ncsa.uiuc.edu

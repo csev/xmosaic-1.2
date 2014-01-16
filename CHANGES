@@ -1,0 +1,497 @@
+See document FEATURES for canonical list of features.
+
+From 1.1 to 1.2
+...............
+
+ o Binary transfer mode, when on, now forces all files to be treated as
+   binary, whether or not their extensions are recognized.  (Due to
+   overwhelming popular request.) 
+ o Gopher file types are now picked up on the basis of file extension, if a
+   file extension exists, with the default being the normally assumed
+   type.  This means that "foo.ps" returned as type '0' (text) is interpreted
+   as PostScript, etc.  Resource tweakGopherTypes (default True) can be
+   set to False to turn this off and interpret Gopher documents stricly by
+   the Gopher typing system.  
+ o Resource postscriptViewerCommand is now "dump" by default.  This
+   is because ghostview (the previous default), as currently shipped, runs
+   ghostscript in unsafe mode and a malicious PostScript file could cause
+   damage to your filesystem as a result.  
+ o Added fullHostname resource to allow explicit setting of the fully
+   qualified hostname (machine.domain).  We recommend you don't use
+   this resource (allow Mosaic to determine your full hostname on the
+   fly) unless your system chokes on gethostbyname().  
+ o Fixed problem with annotationServer resource set and annotation
+   server not available or network down.  
+ o Fixed problem with missing title (or author) in annotation.  
+ o Fixed occasional coredump in File->Reload.  
+ o Fixed occasional crash with inlined images after windows have been
+   closed.  
+ o Made failure of gethostbyname() robust (coredumps actually inside
+   gethostbyname() must still be dealt with by the gethostbynameIsEvil
+   resource).  
+ o Fixed coredump when checking for editable annotation property when
+   document contains no text.  
+ o Fixed coredump when closing window if hotkey is hit while window
+   is still open but in the process of being destroyed.  
+ o Local files should now always be automatically canonicalized into a
+   full URL of form file://hostname/full/path/filename -- this applies to
+   command-line arguments and to filenames passed through
+   File->Open.
+ o Now recognize file://localhost/ scheme for expressly accessing local
+   files.  
+ o Fixed problem with multiline FTP server responses (courtesy John
+   Ockerbloom).  
+ o Fixed problem with ".." in FTP directory resulting in slash falling off
+   of toplevel URL and subsequent jumps failing.  
+ o Fixed problem with trailing slashes in FTP directory specifications
+   that were causing part of the directory name to be used twice.  
+ o Changed sgimoviePlayerCommand default to movieplayer, which
+   actually exists on some SGI systems.  
+ o Made a few changes to menubar Documents and Help menus.  
+ o Cleaned up lots of typecasting warnings in Xmx code.  
+ o Fixed problem with Motif 1.2 and file insertions in annotate window.  
+ o Fixed problem with double quotes in titles of group annotations.  
+ o Added resource reverseInlinedBitmapColors to allow reversal of
+   foreground and background colors in inlined XBM bitmaps.  
+ o Fixed problem with group annotations on URL's containing pound
+   signs (normally this never happens, but it will happen for HDF files in
+   Mosaic 2.0).  
+ o Added confirmation box for deleting annotations from the menubar;
+   added resource confirmDeleteAnnotation, defaults to true.  
+ o Correctly recognizes mis-suffixed HTML files starting with <head>,
+   <html>, and <HTML> tags also now.  
+ o XPM3-format inlined image support fixed.  
+
+From 1.0 to 1.1
+...............
+
+ o Hotkeys in document view windows.  
+ o Color leaks and glitches in inlined image support fixed.  
+ o Support for TMPDIR environment variable, as well as resource 
+   tmpDirectory and command-line flag -tmpdir, for specifying
+   location of tmp directory for transient data files.  
+ o Added GUI-supported modification of hotlist entry titles.  
+ o Added ISMAP tag support to IMG tag (courtesy Tony Sanders).  
+ o CSO phonebook support (courtesy Lou Montulli).  
+ o Added printing/saving straight to PostScript (courtesy Ameet A.  Raval).
+   No support for images yet, though.  
+ o Fixed typo in Motif 1.2 support in HTML widget.  
+ o Fixed typo (nothing was broken, just caused it to be a little slow
+   sometimes) in document page handling.  
+ o Two spaces between sentences in pretty selections now.  
+ o SGML comments are now ignored.  
+ o Updated copyright notice.  
+ o Documentation hyperlinks point straight to new NCSA server.  
+ o Mosaic can now be remotely controlled via signals by a parent process;
+   e.g., to allow use as a browser for context-sensitive help from another
+   application.  More information coming...  
+ o Default rgbViewerCommand is now 'xv' on non-SGI platforms, since xv
+   3.0 now handles SGI RGB files.  
+ o New WAIS interface document, pointing to NCSA gateway.  
+ o URL of document is now sent in 'Mail To...' messages.  
+ o <cite> now supported.  
+ o <blockquote> now supported.  
+ o <var> now uses italics.  
+ o Fixed rare parsing/layout coredumps.  
+ o Fixed rare pretty selection coredumps.  
+ o Fixed stupid memory and file-handling glitches; made hotlist and other
+   config file-handling much more robust.  
+ o Properly handle (nuke) newlines in titles and URL's now.  
+ o Fixed rare stupid coredumps in Motif lists.  
+ o No more coredump when saving/printing/mailing empty file.  
+ o Mosaic now has no default geometry resource value.  Initial window
+   placement and toplevel dialog placement will be entirely according to
+   your window manager's settings.  
+ o Added resource percentVerticalSpace to allow customization of the space
+   between paragraphs, between headers and paragraphs, etc.  in the HTML
+   widget.  
+ o Fixed coredump when starting Mosaic with home page a directory with
+   no slashes in the specification.  
+ o Added recognition of '.gz' for gzip'd files, as per GNU change.  
+ o Fixed glitch with X bitmaps served by Gopher servers as inlined images.  
+ o Added editres support.  
+ o Added Motif 1.2 tearoff menu support.  
+ o Better DEC Alpha OSF/1 support.  
+ o Better Dell SVR4 support.  
+ o A few more source cleanups for NeXT support.  
+ o Reorganized Documents menu and added new options to Help menu.  
+ o Added support for group annotation server (not yet available).  
+ o Cleaned up src/Makefile (some).  
+ o Suffixes .dump and .saveme are now recognized and trigger binary
+   file dump to local disk.  
+ o Busy cursor now shows up more often, like it should.  
+ o HDF files are now recognized and passed to Collage via Collage's -load
+   option, which isn't yet in a released version.  
+ o Miscellaneous bug fixes and cleanups.  
+
+From 0.13 to 1.0
+................
+
+ o Added new resource, gethostbynameIsEvil, for Sun's that
+   coredump when gethostbyname() is called to try to find out what
+   their own names are. (Command-line flag is -ghbnie.) 
+ o Explicitly pop down all dialog boxes when document view
+   window is closed, for window managers too dull to do so
+   themselves. 
+ o Better visited anchor color for non-SGI's. 
+ o Added .hqx and .uu to list of file extensions handled like .tar files. 
+ o Added 'Clear' button to Open box, to allow more convenient
+   cut-n-paste entries of URL's. 
+ o New resource 'autoPlaceWindows'; if set to False, new document
+   view windows will not be automatically positioned by the
+   program itself (but it's still up to your window manager just how
+   they're placed). 
+ o Command-line flags -i and -iconic now have desired effect (new
+   resource initialWindowIconic can also be used). 
+ o Gif-reading code is a little more bulletproof. 
+ o Obscure infinite loop triggered by extra space in IMG tag fixed. 
+ o Eliminated nonintuitive error message when image can't be read
+   (inlined NCSA bitmap is indication enough that something's not
+   right for authors, and readers can't do anything about bad images
+   in any case). 
+ o Obscure parsing bug (for constructs like <ADDRESS><A
+   HREF=...>text<A></ADDRESS>) fixed. 
+ o Fixed mysterious stupid coredump that only hits Suns. 
+ o Fixed stupid coredump on URL's like '://cbl.leeds.ac.uk/'. 
+ o Fixed buglet in handling rlogin URL's. 
+ o New support for Solaris/SYSVR4 (courtesy
+   dana@thumper.bellcore.com). 
+ o Better support for HP-UX 8.x and 9.x (courtesy
+   johns@hpwarf.wal.hp.com). 
+ o Better support for NeXT (courtesy scott@shrug.dur.ac.uk). 
+ o Some miscellaneous portability fixes (courtesy
+   bingle@cs.purdue.edu). 
+ o Miscellaneous bug fixes and cleanups. 
+
+From 0.12 to 0.13
+.................
+
+ o Fixed occasional mysterious coredump in startup routines. 
+ o Fixed occasional stupid coredump in freeing document text. 
+ o Fixed silly coredump on accessing malformed URLs like
+   ftp:/tcp/xxx.yyy.zzz.www. 
+ o Fixed URL parsing choke on accessing URL 'test.html#foobar' as
+   an initial program argument. 
+ o Added system() call error reporting. 
+ o Changed default anchor representations: blue and single solid
+   underline for unvisited, dark purple and single dashed underline
+   for visited. 
+ o Jumping from 2nd+ document page to 1st document page in a
+   single document via anchors works now. 
+ o Various glitches with scrollbars, document pages, etc. fixed. 
+ o New toggle-button options (caseless, backwards) in File->Search
+   window. 
+ o File->Search doesn't put search results on top line of window. 
+ o Use of -l flag for rlogins restored. 
+ o Built-in finger interface with faces support (thanks, Marc V of
+   IU!). 
+ o Miscellaneous bug fixes and cleanups. 
+
+From 0.11 to 0.12
+.................
+
+ o Files retrieved via binary transfer mode now get a file selection box
+   for user-provided filename. 
+ o Inlined image widths are now taken into account when formatting
+   text & images together. 
+ o Fixed trigger of server bug on some systems wrt freeing color cells. 
+ o Inlined images work on 24-bit TrueColor servers now. 
+ o GUI interface for mailing hotlist and window history lists. 
+ o Support for <ol> (numbered lists). 
+ o Better support for nested description lists. 
+ o Support for <tt>, <b>, <i>, <em>, <strong>, <code>, <samp>,
+   <kbd>, <var>, and corresponding resources italicFont, boldFont, and
+   fixedFont. 
+ o Better 8-bit cleanliness. 
+ o Bug with inlined images as anchors at end of documents fixed. 
+ o Compact description lists: <dl compact> causes first line of <dd>
+   text to jump up on same line with <dt> if room exists. 
+ o SGML representations of 8-bit ISO8859 characters now work. 
+ o Fixed bugs with weird Lucida font metrics on DEC Alpha and a few
+   other servers. 
+ o Fixed coredump triggered by <li>'s outside of a list. 
+ o Fixed coredumps on malformed URL's like telnet:machine.name. 
+ o Fixed coredumps on malformed URL's like
+   gopher:/gopher.uiuc.edu/. 
+ o Various document types returned via WAIS searches are now
+   detected (by extension only) and forked to viewers as appropriate. 
+ o Fixed minor bug with disappearing whitespace. 
+ o Fixed bug with extraneous newlines in description lists in very
+   narrow windows. 
+ o Fixed bug with erroneous description elements causing text to fall
+   off the left side of the screen. 
+ o Audio annotations on HP systems with audio hardware work now. 
+ o Default SGI audio annotation quality is lower now, to decrease disk
+   space usage. 
+ o SCO Open Desktop support. 
+ o Harris Nighthawk support. 
+ o AIX 3.2 support for reading local directories. 
+ o Minor bugfixes and cleanups. 
+
+From 0.10 to 0.11
+.................
+
+ o Bug fix for non-SGI X servers: bitmaps now show up with
+   correct (normal foreground and background) colors.
+ o Bug fix for Ultrix: no more meaningless coredumps when
+   closing windows.
+
+From 0.9 to 0.10
+................
+
+ o Support for <IMG> tag: inlined images in HTML documents.
+    o Handles X bitmap and GIF formats so far.
+    o New resource, colorsPerInlinedImage, can be used to restrict
+      color use of inlined images -- default is 50.
+    o Image files can be located anywhere on the net (pointed to by
+      URL); image data is cached in memory for fast display and
+      reuse.
+    o Example of inlined bitmap: 
+      <IMG SRC="file://foobar.com/foobar.xbm">
+    o Example of inlined image serving as anchor: 
+      <A HREF="http://foobar.com/ref.html"> 
+      <IMG SRC="file://foobar.com/blagh.gif"> </A>
+ o Better support for acting as binary file retrieval client.
+    o Each window can either be in binary transfer mode or not;
+      resource binaryTransferMode controls startup value (default
+      is 'False', and you probably don't want to change this). A
+      toggle button in the Options menu allows changing on the fly.
+    o If a window is not in binary trasfer mode, data files with
+      unrecognized types will be displayed in the window as either
+      plain text or HTML (depending on the server type), as before.
+    o If a window is in binary transfer mode, data files with
+      unrecognized types will be dumped to a local file after being
+      transferred over as binary data.
+    o Regardless of whether a window is in binary transfer mode or
+      not, files with recognizes types (images, sound, etc.) will be
+      handled as usual, and uncompression will be transparent as
+      usual.
+    o The whole point of all this is to allow the user to select on the
+      fly how a given file of an unrecognized type is to be handled.
+    o Because files are currently typed by filename extension,
+      binary transfer mode should generally be kept off, otherwise
+      it will screw up things like WAIS searches pretty badly. Also,
+      since Gopher does things differently from everyone else,
+      things are different there too.
+    o Setting one of the multimedia resources to the text string
+      "dump" will cause files of that type to be dumped to local
+      disk as though in binary transfer mode.
+    o See http://hoohoo.ncsa.uiuc.edu:80/mosaic-docs/file-typing-issues.html 
+      for a more thorough discussion of these issues.
+ o Audio annotations for Sun's with /usr/demo/SOUND/record (or
+   something similar) are now enabled. Resources
+   recordCommandLocation and recordCommand are used to specify the
+   command used to record sound; theoretically, this approach can be
+   used on any platform with appropriate hardware and software,
+   although SGI Indigo & Sun Sparcstation are the only two that I know
+   of.
+ o Search capability within documents: enter search term, scrollbar
+   jumps to match and match is highlighted; repeat as desired.
+ o Enhanced support for various Gopher types, including binary files
+   and CSO phonebooks (sorry, phonebooks aren't supported yet, but at
+   least now an error message shows up).
+ o Spaces converted to +'s in keyword queries now.
+ o Scrollbar arrows now increment a reasonable amount when viewing
+   large documents.
+ o Anonymous FTP password is now always user@host.domain,
+   enabling access to every strange FTP server out there that I know of.
+ o Pattern-matching to determine file type based on file name now uses
+   caseless string compare.
+ o Better default visited anchor color for non-SGI color displays.
+ o Messages from libwww now show up in pop-up dialogs like they
+   should.
+ o Telnet never gets asked to use unrecognized -l flag.
+ o Tar files are now always retrieved to local disk (and not displayed).
+ o Replacement (and better) Archie interface.
+ o Mail Developers window is cleared on each use.
+ o New resource trackVisitedAnchors; can be used to turn off tracking
+   of visited anchors altogether.
+ o Better transparent uncompression support:
+    o Gzipped (.z) files are now recognized and uncompressed on
+      the fly (as well as .Z files, as before).
+    o New resources uncompressCommand (default 'uncompress')
+      and gunzipCommand (default 'gunzip').
+ o As usual, little bugfixes and cleanups.
+
+From 0.8 to 0.9
+...............
+
+ o Some multimedia support. Yew asked for it...
+    o GIF, JPEG, TIFF, audio, AIFF, DVI, MPEG, MIME, XWD,
+      PostScript automatically recognized.
+    o Pipe to external viewers (with viewers set via X resource
+      mechanism).
+    o Also retrieve images, audio over Gopher.
+    o But not over HTTP (unless you're running a modified HTTP
+      server).
+    o Inlined MIME/multimedia support will be coming down the
+      road, so this is all just a temporary hack.
+ o Transparent handling of compressed (.Z) files.
+ o Hotlist now *always* saved after modification.
+ o Fixed occasional infinite loop/crash for some 8-bit documents.
+ o Fixed various parsing bugs associated with using <xmp> instead of
+   <plaintext> internally.
+ o Links to specific anchors now work properly.
+ o Fixed bug with failure in repeated accesses via FTP.
+ o Fixed bug with spurious ^M's in Gopher anchors.
+ o Fixed bug opening local file while visiting remote file.
+ o Fixed display bug with punctuation falling off end of line.
+ o Fixed problem with BadAlloc crashes on some servers.
+ o Annotation text features.
+    o Choice of annotation links in header or footer.
+    o Automatic (& fast) updating of annotations on every
+      document view.
+    o New defaultAuthorName resource to override use of normal
+      fullname.
+    o Annotations now always use machine's full name.
+ o Menubar item 'Delete This Annotation'.
+ o Audio annotations (SGI only, so far).
+ o Fixed BadWindow bug for annotation window on DECstations.
+ o All plaintext files can now be annotated.
+ o Fixed occasional problem with size of hotlist/history windows.
+ o Added sample app-defaults files to distribution.
+ o New resources for multimedia stuff:
+    o gifViewerCommand (default 'xv')
+    o jpegViewerCommand (default 'xv')
+    o tiffViewerCommand (default 'xv')
+    o audioPlayerCommand (default 'showaudio' from Metamail
+      distribution)
+    o aiffPlayerCommand (default 'sfplay' -- SGI specific)
+    o dviViewerCommand (default 'xdvi')
+    o mpegViewerCommand (default 'mpeg_play')
+    o mimeViewerCommand (default 'xterm -e metamail')
+    o xwdViewerCommand (default 'xwud -in')
+    o rgbViewerCommand (default 'ipaste' -- SGI specific)
+    o postscriptViewerCommand
+ o Deleted annotations now have all corresponding disk files removed.
+ o Mosaic is smarter about the <plaintext> HTML token at the head of
+   plaintext files.
+ o Lots of little cleanups and bug fixes.
+
+From 0.7 to 0.8
+...............
+
+ o Telnet access is enabled for IBM systems (and others that don't define
+   'unix' by default).
+ o TN3270 access is now available (probably will only work on IBM
+   systems).
+ o Underline setting now carries from window to window like it should.
+ o Stupid little bugs nailed in open local file routines.
+ o More stupid little bugs nailed in opening multiple windows.
+ o Fixed buglet with text fields on some platforms.
+ o Most plaintext documents can now be annotated (except for results of
+   WAIS queries and those that use <plaintext> explicitly).
+ o Annotate and Edit Annotation menubar entries disabled for stupid Ultrix,
+   since the annotation window causes a spurious BadWindow error for no
+   apparent reason at all.
+ o Better colors (including brighter colors on non-SGI platforms).
+ o Makefile option to compile with mono colors as the default.
+ o Revised copyright notice.
+ o A few random bugfixes and cleanups.
+
+From 0.6 to 0.7
+...............
+
+ o Annotations!
+    o Personal only (until smart servers get written).
+    o Automatic inlining of annotation pointers into documents.
+    o Annotations automatically persistent across sessions (naturally).
+    o Annotations are subsequently editable/removable.
+    o Lots of neat GUI things.
+ o Underlined anchors! You're gonna love this.
+    o 0, 1, 2, or 3 underlines for each of unvisited and previously
+      visited anchor types.
+    o Solid or dashed underlines for each of unvisited and previously
+      visited anchor types.
+ o Application exits when all windows are closed.
+ o Support for <menu> and <dir>.
+ o Better support for nested lists (filled bullets, empty bullets, 
+   empty boxes).
+ o Better selection capabilities:
+    o Select by character.
+    o New resource, fancySelections: if true, selections will be
+      "pretty-printed" when pasted into a normal X window (with
+      underlined headers, bullets for lists, etc.). This is modifiable
+      per-window from the menubar also.
+ o Additional command-line argument: free-standing URL will be used as
+   home document, and overrides all other specifications (including
+   WWW_HOME, X resource homeDocument, and -home flag). Is that
+   enough ways to specify the home document??? :-)
+ o Additional command-line flag -mono, for getting black&white fallback
+   X defaults... you mono people out there are gonna have to let me know if
+   I'm providing a decent set of mono resources. Should there be a
+   distinction between -mono and -greyscale??
+ o Middle button button in scrolled lists is now equivalent of
+   double-clicking with left button.
+ o Performance enhancement for history window's future list.
+ o Fix for gopher connection port usage.
+ o Fix for proper gopher and WAIS document titles.
+ o Temporary fix to access Supreme Court documents on Cornell Law
+   School server (if manager of that server is out there, please contact me --
+   you have a problem).
+ o Option menu for document title/url display at top of window.
+ o Cute icons in upper right-hand corner of windows for quick window ID.
+ o Previous search keyword is trimmed correctly.
+ o Search keyword remains in text field until search is complete.
+ o New 'Clear Global History' option (to revert all anchors back to the
+   unvisited color).
+ o Fixed bug in hotlist geometry layout.
+ o Lots of new resources:
+    o confirmExit
+    o ghostviewCommand
+    o mailCommand
+    o printCommand
+    o xtermCommand
+    o globalHistoryFile
+    o defaultHotlistFile
+    o personalAnnotationDirectory
+ o Tabs now behave absolutely properly in preformatted text.
+ o Fixed premature signal setup causing coredump when ctrl-c was hit
+   during startup.
+ o Hotlist is saved every time it's changed, to avoid losing information.
+ o Busy cursor is used more often, as it should be.
+ o Better handling of telnet/xterm functions (forked into background;
+   browser never lands on 'telnet' document).
+ o Ghostview runs in background now.
+ o Changed application class name to 'XMosaic' for consistency.
+ o Minor bugfixes and cleanups.
+
+From 0.5 to 0.6
+...............
+
+History window now shows both 'where you've been' and
+  'where you can go'.
+Previously visited nodes are colored differently, a la Midaswww;
+  this global history is automatically persistent across sessions.
+New resources for customization, including:
+  Show URLs instead of Document Titles.
+  Customize window per document feature.
+  Optionally have pointer and focus warp to keyword entry field
+    when you reach a searchable node.
+  Optionally turn off global history mechanism.
+  Specify home document (overridden by WWW_HOME env variable).
+Button2 can now activate anchors; forces a new window
+  to open (as with Window Per Document feature).
+Going from a document necessarily wider than the window
+  (e.g. preformatted text) to a normal document will now
+  get rid of the horizontal scrollbar and reformat properly.
+Scrollbar and document page state is maintained so stepping
+  through the history list lands you were last in each document.
+Addition of Whine option under Help.
+Addition of Go To and Go To Local options under Navigate.
+Addition of outlet to Ghostview for PostScript documents
+  (this is a hack but it's a slick demo feature).
+<listing> is now recognized.
+Tabs now work in preformatted/plaintext regions.
+Numeric character references are now handled.
+Anchors without href's aren't colored anymore.
+Search Keyword field's sensitivity is managed correctly now.
+SIGINT now interrupts network connections too
+  (so you can hit Ctrl-C in shell window at any time).
+Memory leak in document reformatting nailed.
+Cloning a window is now intelligent and doesn't do a network
+  reload; also, window size is maintained.
+Layout glitches fixed.
+Text selection glitches fixed.
+Other misc bugfixes and cleanups.
+Better help.
