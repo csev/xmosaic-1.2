@@ -12,7 +12,7 @@ It installs into /usr/OpenMotif
 
 Of course you need X-Windows installed as well.
 
-You can look at the NCSA README but her are the quick instructions.
+You can look at the NCSA README but here are the quick instructions.
 
     cd libwww
     make clean all
