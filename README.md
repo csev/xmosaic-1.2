@@ -14,19 +14,20 @@ Of course you need X-Windows installed as well.
 
 You can look at the NCSA README but her are the quick instructions.
 
-cd libwww
-make clean all
-cd ../libhtmlw
-make clean all
-cd ../src
-make clean all
+    cd libwww
+    make clean all
+    cd ../libhtmlw
+    make clean all
+    cd ../src
+    make clean all
 
 From the src directory start xmosaic:
 
-./xmosaic &
+    ./xmosaic &
 
 The problem you will have is that this browser talks
 HTTP 1.0 and very few sites will respond to HTTP 1.0
 requests.
 
 ![XMosaic 1.2 running on Max OSX](xmosaic.jpg)
+
