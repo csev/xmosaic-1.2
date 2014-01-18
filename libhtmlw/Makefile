@@ -10,27 +10,28 @@ CC = cc
 # below).  Else Motif 1.1 is assumed.  (The widget will work
 # standalone without Motif, but Mosaic requires Motif.)
 # For SGI's:
-OTHERFLAGS = -cckr
+# OTHERFLAGS = -cckr
 # For HP's:
 # OTHERFLAGS = -I/usr/include/Motif1.1 -I/usr/include/X11R4
 # For SCO:
 # OTHERFLAGS = -DMOTIF1_2
 # For NeXT:
-# OTHERFLAGS = -DNEXT -I/usr/include/X11
+OTHERFLAGS = -DNEXT -I/usr/include/X11 -I /opt/X11/include/
 # For everyone else:
 # OTHERFLAGS = 
 # ----------------------------------------------------------------------------
 
 # ----------------------------------------------------------------------------
 # For SGI's:
-RANLIB = /bin/true
+# RANLIB = /bin/true
 # For everyone else:
-# RANLIB = ranlib
+RANLIB = ranlib
 # ----------------------------------------------------------------------------
 
 # You shouldn't need to edit below here.
 
-CFLAGS = -g -DMOTIF -DXMOSAIC $(OTHERFLAGS)
+# CFLAGS = -g -DMOTIF -DXMOSAIC $(OTHERFLAGS)
+CFLAGS = -g -DXMOSAIC $(OTHERFLAGS)
 
 LIBTARGET = libhtmlw.a
 

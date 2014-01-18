@@ -566,7 +566,7 @@ int	interlace, ignore;
 
 		while (LWZReadByte(fd, FALSE, c) >= 0)
 			;
-		return;
+		return 0 ;
 	}
 
 /*

@@ -238,5 +238,5 @@ mo_status mo_startup (void)
   defer_initial_window = 1;
   mo_post_startup_dialog ();
   
-  return;
+  return 0 ;
 }

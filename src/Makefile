@@ -3,7 +3,7 @@
 
 # ----------------------------------------------------------------------------
 # For normal machines with normal compilers:
-CC = cc
+# CC = cc
 # For Sun's and other non-at-least-pseudo-ANSI-C platforms:
 # CC = gcc
 # For stupid Ultrix:
@@ -11,25 +11,25 @@ CC = cc
 # For HP-UX 8.00:
 # CC = cc -Aa -D_HPUX_SOURCE -I/usr/include/Motif1.1 -I/usr/include/X11R4
 # For NeXT:
-# CC = cc -DNEXT -I/usr/include/X11
+CC = cc -DNEXT -I/usr/include/X11 -I /opt/X11/include/ -I /usr/OpenMotif/include
 # For Dell SVR4:
 # CC = cc -DSVR4
 # ----------------------------------------------------------------------------
 
 # ----------------------------------------------------------------------------
 # For SGI's only:
-AUX_CFLAGS = -cckr
+# AUX_CFLAGS = -cckr
 # For normal platforms:
-# AUX_CFLAGS =
+AUX_CFLAGS =
 # ----------------------------------------------------------------------------
 
 # ----------------------------------------------------------------------------
 # For SGI's only:
-X_LIBS = -lXm_s -lXmu -lXt_s -lX11_s
+# X_LIBS = -lXm_s -lXmu -lXt_s -lX11_s
 # For HP-UX 8.00:
 # X_LIBS = -L/usr/lib/Motif1.1 -lXm -L/usr/lib/X11R4 -lXmu -lXt -lX11
 # For NeXT:
-# X_LIBS = -L/usr/lib/X11 -lXm -lXmu -lXt -lX11
+X_LIBS = -L/usr/OpenMotif/lib -L /opt/X11/lib -lXm -lXmu -lXt -lX11
 # For nearly everyone else:
 # X_LIBS = -lXm -lXmu -lXt -lX11
 # For Sun's (at least running X/Motif as installed on our machines):
@@ -40,13 +40,13 @@ X_LIBS = -lXm_s -lXmu -lXt_s -lX11_s
 
 # ----------------------------------------------------------------------------
 # For SGI's only:
-SYS_LIBS = -lPW -lsun -lmalloc
+# SYS_LIBS = -lPW -lsun -lmalloc
 # For most other Motif platforms:
 # SYS_LIBS = -lPW
 # For SCO ODT:
 # SYS_LIBS = -lPW -lsocket -lmalloc
 # For Sun's and Ultrix:
-# SYS_LIBS =
+SYS_LIBS =
 # For Sun's with no DNS:
 # SYS_LIBS = -lresolv
 # For Dell SVR4:
@@ -55,15 +55,15 @@ SYS_LIBS = -lPW -lsun -lmalloc
 
 # ----------------------------------------------------------------------------
 # If you want to compile DTM support in, use these lines...
-DTMSRCS = net.c netdata.c list.c mesg.c
-DTMOBJS = net.o netdata.o list.o mesg.o
-DTM_FLAGS = -DHAVE_DTM -DHAVE_DMF -I..
-DTM_LIBS = ../libdtm/libdtm.a ../libdmf/libdmf.a
+# DTMSRCS = net.c netdata.c list.c mesg.c
+# DTMOBJS = net.o netdata.o list.o mesg.o
+# DTM_FLAGS = -DHAVE_DTM -DHAVE_DMF -I..
+# DTM_LIBS = ../libdtm/libdtm.a ../libdmf/libdmf.a
 # Else use these lines...
-# DTMSRCS = 
-# DTMOBJS =
-# DTM_FLAGS =
-# DTM_LIBS =
+DTMSRCS = 
+DTMOBJS =
+DTM_FLAGS =
+DTM_LIBS =
 # See the toplevel Mosaic README for more information on DTM.
 # ----------------------------------------------------------------------------
 

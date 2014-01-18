@@ -285,7 +285,7 @@ mo_status mo_wipe_global_history (void)
   /* Memory leak! @@@ */
   mo_init_global_history ();
 
-  return;
+  return 0;
 }
 
 mo_status mo_setup_global_history (void)

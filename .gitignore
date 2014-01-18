@@ -1,3 +1,7 @@
+# The generated binary
+src/xmosaic
+*.zip
+
 # Object files
 *.o
 *.ko

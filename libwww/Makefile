@@ -7,7 +7,7 @@ CC = cc
 
 # ----------------------------------------------------------------------------
 # For SGI's:
-CFLAGS = -g -cckr
+# CFLAGS = -g -cckr
 # For HP's:
 # CFLAGS = -g -Aa -D_HPUX_SOURCE
 # For SCO ODT:
@@ -15,7 +15,7 @@ CFLAGS = -g -cckr
 # For DEC Alpha OSF/1:
 # CFLAGS = -g -DUSE_DIRENT -DUSE_FILENO
 # For NeXT:
-# CFLAGS = -g -DNEXT
+CFLAGS = -g -DNEXT
 # For Dell SVR4:
 # CFLAGS = -g -DSVR4
 # For Harris Nighthawk:
@@ -26,9 +26,9 @@ CFLAGS = -g -cckr
 
 # ----------------------------------------------------------------------------
 # For SGI's and SCO ODT:
-RANLIB = /bin/true
+# RANLIB = /bin/true
 # For everyone else:
-# RANLIB = ranlib
+RANLIB = ranlib
 # ----------------------------------------------------------------------------
 
 # You shouldn't need to edit below here.

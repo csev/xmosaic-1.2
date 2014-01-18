@@ -53,8 +53,8 @@ extern int errno;
 #ifndef vms
 #ifndef NeXT
 #ifndef THINK_C
-extern char *sys_errlist[];		/* see man perror on cernvax */
-extern int sys_nerr;
+// extern char *sys_errlist[];		/* see man perror on cernvax */
+// extern int sys_nerr;
 #endif  /* think c */
 #endif	/* NeXT */
 #endif  /* vms */

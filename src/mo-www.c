@@ -442,12 +442,12 @@ char *HText_getText (HText *me)
 
 BOOL HText_select (HText *text)
 {
-  return;
+  return 0;
 }
 
 BOOL HText_selectAnchor (HText *text, HTChildAnchor *anchor)
 {
-  return;
+  return 0;
 }
 
 #ifndef L_tmpnam

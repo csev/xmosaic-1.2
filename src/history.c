@@ -97,7 +97,7 @@ mo_status mo_kill_node_descendents (mo_window *win, mo_node *node)
   int count = 0;
 
   if (node == NULL)
-    return;
+    return 0;
   for (foo = node->next; foo != NULL; foo = foo->next)
     {
       mo_free_node_data (foo);
@@ -110,7 +110,7 @@ mo_status mo_kill_node_descendents (mo_window *win, mo_node *node)
       XmListDeleteItemsPos (win->history_list, count, node->position + 1);
     }
 
-  return;
+  return 0;
 }
 
 /* ------------------------ mo_add_node_to_history ------------------------ */
