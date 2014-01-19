@@ -25,9 +25,20 @@ From the src directory start xmosaic:
 
     ./xmosaic &
 
-The problem you will have is that this browser talks
-HTTP 1.0 and very few sites will respond to HTTP 1.0
-requests.
+I have made very few changes to let it browse a bit more of the web
+reasonably:
+
+* It uses HTTP/1.1 instead of HTTP 1.0 so it can see virtual hosted sites
+
+* It uses sips to convert all images to gif to give best chance of seeing them.
+
+* It ignores ampersand hex values as those were not invented yet
+
+* It hides content between script and style tags as those were not invented yet
+
+It also is pretty chatty in the console while it is running - I am still 
+working on the code and want to see if it breaks.
 
 ![XMosaic 1.2 running on Max OSX](xmosaic.jpg)
+
 
