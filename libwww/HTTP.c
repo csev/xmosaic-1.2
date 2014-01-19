@@ -15,6 +15,7 @@
 #include "HTFile.h"
 
 #define TRACE 1 
+#define HTTP11 1 
 
 /*		Load Document from HTTP Server			HTLoadHTTP()
 **		==============================
@@ -120,7 +121,7 @@ PUBLIC int HTLoadHTTP ARGS4 (CONST char *, arg,
         if (command == NULL) outofmem(__FILE__, "HTLoadHTTP");
         strcpy(command, "GET ");
 	strcat(command, arg);
-    } else { /* not gatewayed */
+    } else if ( HTTP11 ) { /* not gatewayed */
         /* Switch this to HTTP 1.1 */
 	char * p1 = HTParse(arg, "", PARSE_PATH|PARSE_PUNCTUATION);
         command = malloc(4 + strlen(arg) + 11 + 6 + strlen(host) + 2 + 20 + 2 + 1);
@@ -132,14 +133,13 @@ PUBLIC int HTLoadHTTP ARGS4 (CONST char *, arg,
         strcat(command, host);
         strcat(command, "\r\n");
         strcat(command, "Connection: close\r\n");
-/*
+    } else {
 	char * p1 = HTParse(arg, "", PARSE_PATH|PARSE_PUNCTUATION);
         command = malloc(4 + strlen(p1)+ 2 + 1);
         if (command == NULL) outofmem(__FILE__, "HTLoadHTTP");
         strcpy(command, "GET ");
 	strcat(command, p1);
 	free(p1);
-*/
     }
     strcat(command, "\r\n");		/* Include CR for telnet compat. */
 	    
@@ -163,23 +163,24 @@ PUBLIC int HTLoadHTTP ARGS4 (CONST char *, arg,
     }
 
     /* Skip the HTTP 1.1 headers */
-    char buffer[2];
-    int endhdr = 0;
-    while ( 1 ) {
-        int rc = read(s, buffer, 1) ;
-        if ( TRACE ) fprintf(stderr,"%c",buffer[0]);
-        if ( rc < 1 ) {
-	    if (TRACE) fprintf(stderr, "HTTPAccess: EOF reading headers.\n");
-	    return HTInetStatus("send");
+    if ( HTTP11 ) {
+        char buffer[2];
+        int endhdr = 0;
+        while ( 1 ) {
+            int rc = read(s, buffer, 1) ;
+            if ( TRACE ) fprintf(stderr,"%c",buffer[0]);
+            if ( rc < 1 ) {
+	        if (TRACE) fprintf(stderr, "HTTPAccess: EOF reading headers.\n");
+	        return HTInetStatus("send");
+            }
+            if ( buffer[0] == '\r' && endhdr == 0 ) endhdr = 1;
+            else if ( buffer[0] == '\n' && endhdr == 1 ) endhdr = 2;
+            else if ( buffer[0] == '\r' && endhdr == 2 ) endhdr = 3;
+            else if ( buffer[0] == '\n' && endhdr == 3 ) break;
+            else endhdr = 0;
         }
-        if ( buffer[0] == '\r' && endhdr == 0 ) endhdr = 1;
-        else if ( buffer[0] == '\n' && endhdr == 1 ) endhdr = 2;
-        else if ( buffer[0] == '\r' && endhdr == 2 ) endhdr = 3;
-        else if ( buffer[0] == '\n' && endhdr == 3 ) break;
-        else endhdr = 0;
     }
-
-/*	Now load the date
+/*	Now load the data
 */
     
     {
