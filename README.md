@@ -41,4 +41,5 @@ working on the code and want to see if it breaks.
 
 ![XMosaic 1.2 running on Max OSX](xmosaic.jpg)
 
+![XMosaic 1.2 viewing info.cern.ch](info-cern.jpg)
 
