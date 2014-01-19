@@ -744,11 +744,16 @@ int *w, *h;
 XColor *colrs;
 {
 	unsigned char *bit_data;
+    char syscmd[2048];
 	FILE *fp;
+
+    /* Force all images to be GIF - at least they work */
+    sprintf(syscmd, "rm /tmp/lastconvert; mv %s /tmp/lastconvert; sips -s format gif /tmp/lastconvert --out %s",datafile, datafile);
+    fprintf(stderr,"%s\n",syscmd);
+    system(syscmd);
 
         /* Obviously this isn't going to work. */
         fp = fopen(datafile, "r");
-
 	if (fp != NULL)
 	{
 		bit_data = ReadGIF(fp, w, h, colrs);
