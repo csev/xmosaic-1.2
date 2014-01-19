@@ -276,9 +276,11 @@ ExpandEscapes(esc, endp, unterminated)
 {
 	int cnt;
 	char val;
+    int seqlen;
 
+    seqlen = strlen(esc);
 	esc++;
-	if (*esc == '#')
+	if (*esc == '#' && esc[1] != 'x')
 	{
 		if (unterminated)
 		{
@@ -322,8 +324,13 @@ ExpandEscapes(esc, endp, unterminated)
 #ifdef VERBOSE
 			fprintf(stderr, "Error bad & string\n");
 #endif
+            /*
 			val = '\0';
 			*endp = (char *)NULL;
+            */
+            // Just eat bad escape sequences (including hex ones)
+			val = ' ';
+			*endp = (char *)(esc + seqlen - 2 );  // & and ; don't count
 		}
 	}
 
