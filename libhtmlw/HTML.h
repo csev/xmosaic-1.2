@@ -222,6 +222,9 @@ struct ref_rec {
 #define M_CITATION	34
 #define M_BLOCKQUOTE	35
 
+#define M_SCRIPT	36
+#define M_STYLE	37
+
 /* syntax of Mark types */
 #define	MT_TITLE	"title"
 #define	MT_HEADER_1	"h1"
@@ -258,6 +261,8 @@ struct ref_rec {
 #define MT_VARIABLE	"var"
 #define MT_CITATION	"cite"
 #define MT_BLOCKQUOTE	"blockquote"
+#define MT_SCRIPT	"script"
+#define MT_STYLE	"style"
 
 
 /* anchor tags */

@@ -132,6 +132,7 @@ static int TextIndent;
 static int MarginW;
 static int Ignore;
 static int Preformat;
+static int Droptext;
 static int PF_LF_State; /* Pre-formatted linefeed state.  Hack for bad HTMLs */
 static int NeedSpace;
 static Boolean Internal;
@@ -1324,6 +1325,10 @@ FormatPlace(hw, mptr, x, y, width)
 	int line_x;
 
 	text = mptr->text;
+    if ( Droptext ) {
+        fprintf(stderr,"X %s\n",text);
+        return;
+    }
 
 	line_x = *x;
 	line = (char *)malloc(1);
@@ -2547,6 +2552,17 @@ TriggerMarkChanges(hw, mptr, x, y)
 				}
 				PushFont(currentFont);
 				font = hw->html.font;
+			}
+			break;
+		case M_STYLE:
+		case M_SCRIPT:
+			if (mark->is_end)
+			{
+                Droptext = 0;
+			}
+			else
+			{
+                Droptext = 1;
 			}
 			break;
 		case M_INDEX:

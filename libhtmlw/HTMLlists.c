@@ -283,6 +283,12 @@ PrintType(type)
 		case M_BLOCKQUOTE:
 			printf("M_BLOCKQUOTE");
 			break;
+		case M_SCRIPT:
+			printf("M_SCRIPT");
+			break;
+		case M_STYLE:
+			printf("M_STYLE");
+			break;
 		default:
 			printf("UNKNOWN %d", type);
 			break;

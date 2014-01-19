@@ -982,6 +982,14 @@ ParseMarkType(str)
 	{
 		type = M_ANCHOR;
 	}
+	else if (caseless_equal(str, MT_SCRIPT))
+	{
+		type = M_SCRIPT;
+	}
+	else if (caseless_equal(str, MT_STYLE))
+	{
+		type = M_STYLE;
+	}
 	else if (caseless_equal(str, MT_TITLE))
 	{
 		type = M_TITLE;
