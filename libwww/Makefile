@@ -1,6 +1,6 @@
 # ----------------------------------------------------------------------------
 # For normal machines with normal compilers:
-CC = cc
+CC = cc -mmacosx-version-min=10.5 -arch i386
 # For Sun's and other non-at-least-pseudo-ANSI-C platforms:
 # CC = gcc
 # ----------------------------------------------------------------------------
@@ -15,7 +15,7 @@ CC = cc
 # For DEC Alpha OSF/1:
 # CFLAGS = -g -DUSE_DIRENT -DUSE_FILENO
 # For NeXT:
-CFLAGS = -g -DNEXT
+CFLAGS = -g -DNEXT 
 # For Dell SVR4:
 # CFLAGS = -g -DSVR4
 # For Harris Nighthawk:

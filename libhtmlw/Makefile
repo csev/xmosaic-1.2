@@ -1,6 +1,6 @@
 # ----------------------------------------------------------------------------
 # For normal machines with normal compilers:
-CC = cc
+CC = cc -mmacosx-version-min=10.5 -arch i386
 # For Sun's and other non-at-least-pseudo-ANSI-C platforms:
 # CC = gcc
 # ----------------------------------------------------------------------------
@@ -31,7 +31,7 @@ RANLIB = ranlib
 # You shouldn't need to edit below here.
 
 # CFLAGS = -g -DMOTIF -DXMOSAIC $(OTHERFLAGS)
-CFLAGS = -g -DXMOSAIC $(OTHERFLAGS)
+CFLAGS = -g -DXMOSAIC $(OTHERFLAGS)  
 
 LIBTARGET = libhtmlw.a
 

@@ -11,7 +11,7 @@
 # For HP-UX 8.00:
 # CC = cc -Aa -D_HPUX_SOURCE -I/usr/include/Motif1.1 -I/usr/include/X11R4
 # For NeXT:
-CC = cc -DNEXT -I/usr/include/X11 -I /opt/X11/include/ -I /usr/OpenMotif/include
+CC = cc -DNEXT -I /opt/X11/include/ -I /usr/OpenMotif/include -mmacosx-version-min=10.5 -arch i386
 # For Dell SVR4:
 # CC = cc -DSVR4
 # ----------------------------------------------------------------------------
@@ -20,7 +20,7 @@ CC = cc -DNEXT -I/usr/include/X11 -I /opt/X11/include/ -I /usr/OpenMotif/include
 # For SGI's only:
 # AUX_CFLAGS = -cckr
 # For normal platforms:
-AUX_CFLAGS =
+AUX_CFLAGS =  
 # ----------------------------------------------------------------------------
 
 # ----------------------------------------------------------------------------
@@ -46,7 +46,7 @@ X_LIBS = -L/usr/OpenMotif/lib -L /opt/X11/lib -lXm -lXmu -lXt -lX11
 # For SCO ODT:
 # SYS_LIBS = -lPW -lsocket -lmalloc
 # For Sun's and Ultrix:
-SYS_LIBS =
+SYS_LIBS = 
 # For Sun's with no DNS:
 # SYS_LIBS = -lresolv
 # For Dell SVR4:
