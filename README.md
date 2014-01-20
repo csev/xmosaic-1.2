@@ -16,6 +16,20 @@ OpenMotif installs into /usr/OpenMotif
 Here is a compiled [Binary Distribution](https://github.com/csev/xmosaic-1.2/blob/master/XMosaic.zip?raw=true) 
 that should work on Max OS/X 10.6 or later (with the pre-requisites installed).
 
+I am *not* an expert in Mac OS/X application distribution so I don't have 
+any kind of one-click installer simply because I don't have the skills to 
+make such an installer.
+
+Demonstration
+=============
+
+Here is a [YouTube Video](http://www.youtube.com/watch?v=bxx528av7ns) demonstrating the 
+application.
+
+
+Compiling the Code
+==================
+
 You can look at the NCSA README but here are the quick instructions.
 
     cd libwww

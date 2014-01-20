@@ -1,8 +1,15 @@
 NCSA XMosaic 1.2 for the Macintosh
+==================================
 
 This is working version of NCSA XMosaic 1.2 originally released by NCSA
-in 1993.  I think that it only works on 10.6 and later. 
+in 1993.  I think that it only works on 10.6 and later.  All my testing
+is 10.8 - but I complied it with a target of 10.6.
+
 See the Copyright file for copyright details.
+
+Note - I am *not* an expert on OSX application distribution so I 
+don't have a one-click installer - if someone wants to show me 
+how to make one - I would be much obliged.
 
 Pre-Requisites
 ==============
@@ -22,6 +29,11 @@ The default home page is the original NSCA page.  Another great page
 is the first page on the web:
 
 http://info.cern.ch/
+
+Demonstration
+=============
+
+Here is a demonstration f the application http://www.youtube.com/watch?v=bxx528av7ns
 
 Source Code
 ===========
