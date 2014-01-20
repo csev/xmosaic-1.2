@@ -1,7 +1,8 @@
 NCSA XMosaic 1.2 for the Macintosh
 
 This is working version of NCSA XMosaic 1.2 originally released by NCSA
-in 1993.  See the Copyright file for copyright details.
+in 1993.  I think that it only works on 10.6 and later. 
+See the Copyright file for copyright details.
 
 Pre-Requisites
 ==============
