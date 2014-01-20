@@ -1,8 +1,9 @@
 xmosaic-1.2
 ===========
 
-A Place for me to play with XMosaic-1.2 - Mostly to try to get it to 
-work on a Mac.
+I took a few hours, downloaded xmosaic-1.2 and got it working on Max OS/X as part
+of an article I was writing - the code is here in case you want to experience what the
+web was like in 1993 :)
 
 Pre-Requisites - Download and install X-Windows and OpenMotif from:
 
