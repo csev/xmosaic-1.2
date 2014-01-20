@@ -1,6 +1,6 @@
 # The generated binary
 src/xmosaic
-*.zip
+XMosaic/xmosaic
 *.swp
 
 # Object files

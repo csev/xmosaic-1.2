@@ -4,13 +4,16 @@ xmosaic-1.2
 A Place for me to play with XMosaic-1.2 - Mostly to try to get it to 
 work on a Mac.
 
-Pre-Requisites - Download and install OpenMotif from:
+Pre-Requisites - Download and install X-Windows and OpenMotif from:
+
+http://xquartz.macosforge.org/landing/
 
 http://www.ist-inc.com/motif/download/index.html
 
-It installs into /usr/OpenMotif
+OpenMotif installs into /usr/OpenMotif
 
-Of course you need X-Windows installed as well.
+Here is a compiled ![Binary Distribution](XMosaic.zip) that should work 
+on Max OS/X 10.5 or later (with the pre-requisites installed).
 
 You can look at the NCSA README but here are the quick instructions.
 
@@ -39,7 +42,7 @@ reasonably:
 It also is pretty chatty in the console while it is running - I am still 
 working on the code and want to see if it breaks.
 
-![XMosaic 1.2 running on Max OSX](xmosaic.jpg)
+![XMosaic 1.2 running on Max OSX](XMosaic/xmosaic.jpg)
 
-![XMosaic 1.2 viewing info.cern.ch](info-cern.jpg)
+![XMosaic 1.2 viewing info.cern.ch](XMosaic/info-cern.jpg)
 
