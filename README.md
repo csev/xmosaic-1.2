@@ -13,8 +13,8 @@ http://www.ist-inc.com/motif/download/index.html
 
 OpenMotif installs into /usr/OpenMotif
 
-Here is a compiled ![Binary Distribution](XMosaic.zip) that should work 
-on Max OS/X 10.5 or later (with the pre-requisites installed).
+Here is a compiled [Binary Distribution](https://github.com/csev/xmosaic-1.2/blob/master/XMosaic.zip?raw=true) 
+that should work on Max OS/X 10.5 or later (with the pre-requisites installed).
 
 You can look at the NCSA README but here are the quick instructions.
 
