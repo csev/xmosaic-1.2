@@ -11,7 +11,7 @@
 # For HP-UX 8.00:
 # CC = cc -Aa -D_HPUX_SOURCE -I/usr/include/Motif1.1 -I/usr/include/X11R4
 # For NeXT:
-CC = cc -DNEXT -I /opt/X11/include/ -I /usr/OpenMotif/include -mmacosx-version-min=10.5 -arch i386
+CC = cc -DNEXT -I/usr/include/X11 -I/opt/X11/include -I/usr/OpenMotif/include -mmacosx-version-min=10.5 -arch i386
 # For Dell SVR4:
 # CC = cc -DSVR4
 # ----------------------------------------------------------------------------
@@ -29,7 +29,7 @@ AUX_CFLAGS =
 # For HP-UX 8.00:
 # X_LIBS = -L/usr/lib/Motif1.1 -lXm -L/usr/lib/X11R4 -lXmu -lXt -lX11
 # For NeXT:
-X_LIBS = -L/usr/OpenMotif/lib -L /opt/X11/lib -lXm -lXmu -lXt -lX11
+X_LIBS = -L/usr/OpenMotif/lib -L/usr/X11/lib -L/opt/X11/lib -lXm -lXmu -lXt -lX11
 # For nearly everyone else:
 # X_LIBS = -lXm -lXmu -lXt -lX11
 # For Sun's (at least running X/Motif as installed on our machines):
