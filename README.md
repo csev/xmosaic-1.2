@@ -5,7 +5,16 @@ I took a few hours, downloaded xmosaic-1.2 and got it working on Max OS/X as par
 of an article I was writing - the code is here in case you want to experience what the
 web was like in 1993 :)
 
-Pre-Requisites - 
+Demonstration
+=============
+
+Here is a [YouTube Video](http://www.youtube.com/watch?v=bxx528av7ns) demonstrating the 
+application.
+
+
+<u>Ubuntu Linux</u>
+Install these dependencies before building
+apt-get install build-essential libxmu-dev libxmu-headers libxpm-dev libmotif-dev imagemagick
 
 <u>OSX</u> 
 Download and install X-Windows and OpenMotif from:
@@ -16,23 +25,12 @@ http://www.ist-inc.com/motif/download/index.html
 
 OpenMotif installs into /usr/OpenMotif
 
-<u>Ubuntu Linux</u>
-Install these dependencies before building
-apt-get install build-essential libxmu-dev libxmu-headers libxpm-dev libmotif-dev imagemagick
-
-Here is a compiled [Binary Distribution](https://github.com/csev/xmosaic-1.2/blob/master/XMosaic.zip?raw=true) 
+Here is a compiled [Binary Macintosh Distribution](https://github.com/csev/xmosaic-1.2/blob/master/XMosaic.zip?raw=true) 
 that should work on Max OS/X 10.6 or later (with the pre-requisites installed).
 
 I am *not* an expert in Mac OS/X application distribution so I don't have 
 any kind of one-click installer simply because I don't have the skills to 
 make such an installer.
-
-Demonstration
-=============
-
-Here is a [YouTube Video](http://www.youtube.com/watch?v=bxx528av7ns) demonstrating the 
-application.
-
 
 Compiling the Code
 ==================

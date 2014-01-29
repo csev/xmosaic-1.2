@@ -17,9 +17,7 @@
 # For normal machines with normal compilers:
 ifeq ($(DEV_ARCH), linux)
  CC = cc -I/usr/include/X11 -I/usr/include -Dlinux
-endif
-
-ifeq ($(DEV_ARCH), osx)
+else
  CC = cc -DNEXT -I/usr/include/X11 -I/opt/X11/include -I/usr/OpenMotif/include -mmacosx-version-min=10.5 -arch i386 -Dosx
 endif
 

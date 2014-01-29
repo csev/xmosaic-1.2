@@ -20,8 +20,8 @@ linux:
 	cd src && $(MAKE) DEV_ARCH=linux
 
 osx:
-	cd libhtmlw && $(MAKE) DEV_ARCH osx
 	cd libwww && $(MAKE) DEV_ARCH=osx
+	cd libhtmlw && $(MAKE) DEV_ARCH=osx
 	cd src && $(MAKE) DEV_ARCH=osx
 
 clean:
