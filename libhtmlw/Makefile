@@ -1,8 +1,10 @@
 # ----------------------------------------------------------------------------
 # For normal machines with normal compilers:
-ifeq ($(DEV_ARCH), "linux")
+ifeq ($(DEV_ARCH), linux)
 CC = cc
-else
+endif
+
+ifeq ($(DEV_ARCH), osx)
 CC = cc -mmacosx-version-min=10.5 -arch i386
 endif
 
