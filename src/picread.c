@@ -748,9 +748,14 @@ XColor *colrs;
 	FILE *fp;
 
     /* Force all images to be GIF - at least they work */
-    sprintf(syscmd, "rm /tmp/lastconvert; mv %s /tmp/lastconvert; sips -s format gif /tmp/lastconvert --out %s",datafile, datafile);
+#ifdef osx
+    sprintf(syscmd, "mv %s /tmp/lastconvert && sips -s format gif /tmp/lastconvert --out %s",datafile, datafile);
+#endif
+#ifdef linux
+    sprintf(syscmd, "mv %s /tmp/lastconvert && /usr/bin/convert /tmp/lastconvert %s.gif && mv %s.gif %s",datafile, datafile, datafile, datafile);
+#endif
     fprintf(stderr,"%s\n",syscmd);
-    system(syscmd);
+    int i = system(syscmd);
 
         /* Obviously this isn't going to work. */
         fp = fopen(datafile, "r");
@@ -779,7 +784,11 @@ XColor *colrs;
 			return(bit_data);
 		}
 	}
+	else {
+		fprintf(stderr,"Could not read file");
+	}
+
+
 	if (fp != stdin) fclose(fp);
 	return((unsigned char *)NULL);
 }
-
