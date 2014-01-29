@@ -749,10 +749,10 @@ XColor *colrs;
 
     /* Force all images to be GIF - at least they work */
 #ifdef osx
-    sprintf(syscmd, "rm /tmp/lastconvert && mv %s /tmp/lastconvert && sips -s format gif /tmp/lastconvert --out %s",datafile, datafile);
+    sprintf(syscmd, "mv %s /tmp/lastconvert && sips -s format gif /tmp/lastconvert --out %s",datafile, datafile);
 #endif
 #ifdef linux
-    sprintf(syscmd, "rm /tmp/lastconvert && mv %s /tmp/lastconvert && /usr/bin/convert /tmp/lastconvert %s.gif && mv %s.gif %s",datafile, datafile, datafile, datafile);
+    sprintf(syscmd, "mv %s /tmp/lastconvert && /usr/bin/convert /tmp/lastconvert %s.gif && mv %s.gif %s",datafile, datafile, datafile, datafile);
 #endif
     fprintf(stderr,"%s\n",syscmd);
     int i = system(syscmd);
