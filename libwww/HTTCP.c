@@ -60,6 +60,11 @@ extern int errno;
 #endif  /* vms */
 #endif	/* VM */
 
+#ifdef SOLARIS9_BROKEN
+extern int sys_nerr;
+extern char *sys_errlist[];
+#endif
+
 #endif	/* PCNFS */
 
 /*	Report Internet Error

@@ -8,6 +8,10 @@ ifeq ($(DEV_ARCH), osx)
 CC = cc -g -DNEXT -mmacosx-version-min=10.5 -arch i386
 endif
 
+ifeq ($(DEV_ARCH), solaris9)
+CC = gcc -m32 -DUSE_DIRENT -DSOLARIS9_BROKEN
+endif
+
 # For Sun's and other non-at-least-pseudo-ANSI-C platforms:
 # CC = gcc
 # ----------------------------------------------------------------------------

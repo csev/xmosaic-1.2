@@ -23,6 +23,10 @@ ifeq ($(DEV_ARCH), osx)
  CC = cc -DNEXT -I/usr/include/X11 -I/opt/X11/include -I/usr/OpenMotif/include -mmacosx-version-min=10.5 -arch i386 -Dosx
 endif
 
+ifeq ($(DEV_ARCH), solaris9)
+ CC = gcc
+endif
+
 # For Dell SVR4:
 # CC = cc -DSVR4
 # ----------------------------------------------------------------------------
@@ -48,6 +52,10 @@ ifeq ($(DEV_ARCH), osx)
  X_LIBS = -L/usr/OpenMotif/lib -L/usr/X11/lib -L/opt/X11/lib -lXm -lXmu -lXt -lX11
 endif
 
+ifeq ($(DEV_ARCH), solaris9)
+ X_LIBS = -lXm -lXmu -lXt -lX11
+endif
+
 # For nearly everyone else:
 # X_LIBS = -lXm -lXmu -lXt -lX11
 # For Sun's (at least running X/Motif as installed on our machines):
@@ -69,6 +77,11 @@ SYS_LIBS =
 # SYS_LIBS = -lresolv
 # For Dell SVR4:
 # SYS_LIBS = -lnsl -lsocket -lc -lucb
+
+ifeq ($(DEV_ARCH), solaris9)
+ SYS_LIBS = -lnsl -lsocket
+endif
+
 # ----------------------------------------------------------------------------
 
 # ----------------------------------------------------------------------------
