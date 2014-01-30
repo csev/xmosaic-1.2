@@ -1,9 +1,15 @@
 # ----------------------------------------------------------------------------
 # For normal machines with normal compilers:
-ifeq ($(DEV_ARCH), "linux")
+ifeq ($(DEV_ARCH), linux)
 CC = cc
-else
+endif
+
+ifeq ($(DEV_ARCH), osx)
 CC = cc -g -DNEXT -mmacosx-version-min=10.5 -arch i386
+endif
+
+ifeq ($(DEV_ARCH), solaris9)
+CC = gcc -m32 -DUSE_DIRENT -DSOLARIS9_BROKEN
 endif
 
 # For Sun's and other non-at-least-pseudo-ANSI-C platforms:
@@ -20,6 +26,7 @@ endif
 # For DEC Alpha OSF/1:
 # CFLAGS = -g -DUSE_DIRENT -DUSE_FILENO
 # For NeXT:
+# CFLAGS = -g -DNEXT
 # For Dell SVR4:
 # CFLAGS = -g -DSVR4
 # For Harris Nighthawk:

@@ -11,6 +11,7 @@ dev_::
 	@echo "[DEV_ARCH] to one of the following:"
 	@echo "  linux -- x86 running Linux with correct libs installed"
 	@echo "  osx -- Mac OSX 10.6+ with xcode"
+	@echo "  solaris9 -- Solaris 9 with correct libs instatlled"
 	@echo " "
 	@echo "  clean -- Clean all files"
 
@@ -23,6 +24,11 @@ osx:
 	cd libwww && $(MAKE) DEV_ARCH=osx
 	cd libhtmlw && $(MAKE) DEV_ARCH=osx
 	cd src && $(MAKE) DEV_ARCH=osx
+
+solaris9:
+	cd libwww && $(MAKE) DEV_ARCH=solaris9
+	cd libhtmlw && $(MAKE) DEV_ARCH=solaris9
+	cd src && $(MAKE) DEV_ARCH=solaris9
 
 clean:
 	cd libhtmlw; $(MAKE) clean

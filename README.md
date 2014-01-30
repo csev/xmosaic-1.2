@@ -32,6 +32,13 @@ I am *not* an expert in Mac OS/X application distribution so I don't have
 any kind of one-click installer simply because I don't have the skills to 
 make such an installer.
 
+<u>Solaris 9 (32-bit)</u>
+The following packages need to be installed:
+
+* SUNWxwice (X Window System Inter-Client Exchange (ICE) Components)
+* SUNWxwplt (X Window System platform software)
+* SUNWxwrtl (X Window System & Graphics Runtime Library Links in /usr/lib)
+
 Compiling the Code
 ==================
 
@@ -40,6 +47,8 @@ You can look at the NCSA README but here are the quick instructions.
 	make linux (Build for Linux)
 
 	make osx (Build for osx)
+
+	make solaris9 (Build for Solaris 9)
 
 From the src directory start xmosaic:
 

@@ -1,13 +1,20 @@
 # ----------------------------------------------------------------------------
 # For normal machines with normal compilers:
-ifeq ($(DEV_ARCH), "linux")
+ifeq ($(DEV_ARCH), linux)
 CC = cc
-else
+endif
+
+ifeq ($(DEV_ARCH), osx)
 CC = cc -mmacosx-version-min=10.5 -arch i386
+endif
+
+ifeq ($(DEV_ARCH), solaris9)
+CC = gcc
 endif
 
 # For Sun's and other non-at-least-pseudo-ANSI-C platforms:
 # CC = gcc
+
 # ----------------------------------------------------------------------------
 
 # ----------------------------------------------------------------------------
@@ -21,9 +28,14 @@ endif
 # For SCO:
 # OTHERFLAGS = -DMOTIF1_2
 # For NeXT:
-OTHERFLAGS = -DNEXT -I/usr/include/X11 -I /opt/X11/include/
+# OTHERFLAGS = -DNEXT -I/usr/include/X11 -I /opt/X11/include/
 # For everyone else:
-# OTHERFLAGS = 
+OTHERFLAGS = 
+
+ifeq ($(DEV_ARCH), osx)
+OTHERFLAGS = -DNEXT -I/usr/include/X11 -I /opt/X11/include/
+endif
+
 # ----------------------------------------------------------------------------
 
 # ----------------------------------------------------------------------------
