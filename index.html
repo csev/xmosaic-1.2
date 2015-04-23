@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Xmosaic-1.2 by csev</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Xmosaic-1.2</h1>
+        <h2>XMosaic-1.2 (1993) - Running Native under X-Windows on Mac OS/X</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/csev/xmosaic-1.2/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/csev/xmosaic-1.2/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/csev/xmosaic-1.2" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="xmosaic-12" class="anchor" href="#xmosaic-12" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>xmosaic-1.2</code>
+</h1>
+
+<p>I took a few hours, downloaded <code>xmosaic-1.2</code> and got it working on Max OS X as part
+of an article I was writing - the code is here in case you want to experience what the
+web was like in 1993 :)</p>
+
+<h2>
+<a id="demonstration" class="anchor" href="#demonstration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demonstration</h2>
+
+<p>Here is a <a href="http://www.youtube.com/watch?v=bxx528av7ns">YouTube Video</a> demonstrating the 
+application.</p>
+
+<h2>
+<a id="building-xmosaic" class="anchor" href="#building-xmosaic" aria-hidden="true"><span class="octicon octicon-link"></span></a>Building <code>xmosaic</code>
+</h2>
+
+<p>The <code>xmosaic-1.2</code> package can be built on a growing number of platforms, but each has its own
+pre-requisites and dependencies. On all platforms, you will need a C compiler such as gcc.</p>
+
+<h3>
+<a id="pre-requisites-by-platform" class="anchor" href="#pre-requisites-by-platform" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pre-requisites by platform</h3>
+
+<h4>
+<a id="ubuntu-linux" class="anchor" href="#ubuntu-linux" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ubuntu Linux</h4>
+
+<p>Install the required dependencies before building:</p>
+
+<pre><code>$ apt-get install build-essential libxmu-dev libxmu-headers libxpm-dev libmotif-dev imagemagick
+</code></pre>
+
+<h4>
+<a id="mac-os-x-106" class="anchor" href="#mac-os-x-106" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mac OS X (10.6+)</h4>
+
+<p>On <b>10.8 and later</b>, download and install XQuartz:</p>
+
+<pre><code>http://xquartz.macosforge.org/landing/
+</code></pre>
+
+<p>On all versions, download and install OpenMotif:</p>
+
+<pre><code>http://www.ist-inc.com/motif/download/index.html
+</code></pre>
+
+<p>OpenMotif installs into <code>/usr/OpenMotif</code></p>
+
+<h4>
+<a id="solaris-9-32-bit" class="anchor" href="#solaris-9-32-bit" aria-hidden="true"><span class="octicon octicon-link"></span></a>Solaris 9 (32-bit)</h4>
+
+<p>The following Solaris packages need to be installed:</p>
+
+<pre><code>SUNWxwice (X Window System Inter-Client Exchange (ICE) Components)
+SUNWxwplt (X Window System platform software)
+SUNWxwrtl (X Window System &amp; Graphics Runtime Library Links in /usr/lib)
+</code></pre>
+
+<h3>
+<a id="compiling-the-code" class="anchor" href="#compiling-the-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compiling the code</h3>
+
+<p>A top-level Makefile with platform targets is provided and recommended for all builds:</p>
+
+<pre><code>$ make linux     # Build for Linux
+$ make osx       # Build for Mac OS X
+$ make solaris9  # Build for Solaris 9
+</code></pre>
+
+<p>The original NCSA <code>README</code> and the subsidiary <code>Makefiles</code> provide more details.</p>
+
+<p>To start <code>xmosaic</code>:</p>
+
+<pre><code>$ cd src
+$ ./xmosaic &amp;
+</code></pre>
+
+<h2>
+<a id="pre-built-binaries" class="anchor" href="#pre-built-binaries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pre-built binaries</h2>
+
+<p>Here is a compiled <a href="https://github.com/csev/xmosaic-1.2/blob/master/XMosaic.zip?raw=true">Binary Macintosh Distribution</a> 
+that should work on Max OS X 10.6 or later (with the pre-requisites installed).</p>
+
+<p>I am <em>not</em> an expert in Mac OS X application distribution so I don't have 
+any kind of one-click installer simply because I don't have the skills to 
+make such an installer.</p>
+
+<h2>
+<a id="changes-from-original-ncsa-release" class="anchor" href="#changes-from-original-ncsa-release" aria-hidden="true"><span class="octicon octicon-link"></span></a>Changes from original NCSA release</h2>
+
+<p>I have made very few changes to let it browse a bit more of the web
+reasonably:</p>
+
+<ul>
+<li><p>It uses HTTP/1.1 instead of HTTP 1.0 so it can see virtual hosted sites</p></li>
+<li><p>It uses sips for OS X to convert all images to gif to give best chance of seeing them. Under Linux it uses imagemagick.</p></li>
+<li><p>It ignores ampersand hex values as those were not invented yet</p></li>
+<li><p>It hides content between script and style tags as those were not invented yet</p></li>
+</ul>
+
+<p>It also is pretty chatty in the console while it is running - I am still 
+working on the code and want to see if it breaks.</p>
+
+<p><img src="XMosaic/xmosaic.jpg" alt="XMosaic 1.2 running on Max OSX"></p>
+
+<p><img src="XMosaic/info-cern.jpg" alt="XMosaic 1.2 viewing info.cern.ch"></p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
