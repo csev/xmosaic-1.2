@@ -22,6 +22,15 @@ Install the required dependencies before building:
 
 	$ apt-get install build-essential libxmu-dev libxmu-headers libxpm-dev libmotif-dev imagemagick
 
+##### Vagrant setup for Ubuntu Linux
+
+	$ vagrant up
+	$ vagrant ssh -- -X
+	$ cd /vagrant/
+	$ make linux
+	$ cd src
+	$ ./xmosaic
+
 #### Mac OS X (10.6+)
 
 On <b>10.8 and later</b>, download and install XQuartz:
@@ -85,5 +94,3 @@ working on the code and want to see if it breaks.
 ![XMosaic 1.2 running on Max OSX](XMosaic/xmosaic.jpg)
 
 ![XMosaic 1.2 viewing info.cern.ch](XMosaic/info-cern.jpg)
-
-

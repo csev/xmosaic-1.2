@@ -21,3 +21,6 @@ XMosaic/xmosaic
 *.exe
 *.out
 *.app
+
+# Vagrant
+/ubuntu-bionic-18.04-cloudimg-console.log
